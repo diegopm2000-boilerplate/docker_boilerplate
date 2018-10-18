@@ -1,0 +1,5 @@
+task buildImageDocker(type:Exec) {
+
+  executable "docker"
+  args "build","-f","Dockerfile","--rm","-t",DOCKER_IMAGE_NAME,"."
+}

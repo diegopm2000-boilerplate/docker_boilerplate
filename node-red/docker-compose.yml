@@ -1,0 +1,6 @@
+node-red:
+  image: nodered/node-red-docker
+  ports:
+    - 0.0.0.0:1880:1880
+  volumes:
+    - ./volumes/node-red/data:/data

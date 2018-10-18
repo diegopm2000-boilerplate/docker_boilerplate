@@ -1,0 +1,12 @@
+version: "2.0"
+
+services:
+
+  springcloudconfig:
+    image: diegopm2000/springcloudconfigserver
+    ports:
+      - "8888:8888"
+    environment:
+      - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=git@bitbucket.org:ustglobal-spain/fxpayconfig.git
+    volumes:
+    - ./ssh_config:/root/.ssh

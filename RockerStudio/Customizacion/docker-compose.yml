@@ -1,0 +1,5 @@
+rockerstudio:
+  image: diegopm2000/rockerstudio
+  ports:
+    - 0.0.0.0:8787:8787
+    - 0.0.0.0:8080:8022

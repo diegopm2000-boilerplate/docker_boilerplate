@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:TDCc="http://composite.webservices.citd.isb.com" xmlns:TDCs="http://simple.webservices.citd.isb.com" xmlns:cbtypes="http://cbtypes.webservices.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://cbtypes.webservices.isb.com">
+    <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./ws_TDCs.xsd"/>
+    <xs:import namespace="http://composite.webservices.citd.isb.com" schemaLocation="./ws_TDCc.xsd"/>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="cuentaCargo" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+            <xs:element name="cuentaGastos" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+            <xs:element name="bancoCorresponsal" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+            <xs:element name="bancoBeneficiario" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+            <xs:element name="bancoCorresponsalRecep" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+            <xs:element name="bancoBeneficiario07" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+            <xs:element name="bancoIntermediario" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+            <xs:element name="bancoReceptor" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+            <xs:element name="codCanal" type="TDCs:CODIGO_DE_CANAL_Type"/>
+            <xs:element name="descDirBeneficiario" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="nombreBeneficiario" type="TDCs:NOMBRE_DE_PERSONA_Type"/>
+            <xs:element name="descPlaza" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="ctaBeneficiario" type="TDCs:CUENTA_GENERAL_Type"/>
+            <xs:element name="descDetalleGasto2" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descDetalleGasto1" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descDetalleGasto4" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descDetalleGasto7" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="impOperacion" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impCargo" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="indUrgencia" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="descInfoBanco11" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco13" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco21" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco22" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco31" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco32" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco41" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco42" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco51" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco52" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco61" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descInfoBanco62" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="paisDestino" type="TDCs:PAIS_Type"/>
+            <xs:element name="indTipoComisiones" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="persona" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+            <xs:element name="fechaOperacion" type="TDCs:FECHA_GENERICA_Type"/>
+            <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+            <xs:element name="ordenOrigen" type="TDCc:INSTRUCCION_SERVICIO_PE_Type"/>
+            <xs:element name="centroAuxContable" type="TDCc:CENTRO_Type"/>
+            <xs:element name="codAplicacion" type="TDCs:CODIGO_ALFANUM_2_Type"/>
+            <xs:element name="codTiboB7" type="TDCs:CODIGO_ALFANUM_2_Type"/>
+            <xs:element name="indGenEstadoEntrada" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="indGenResibenEntradaPic" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="opDGO" type="TDCc:OPERACION_DGO_Type"/>
+            <xs:element name="codSubaplic" type="TDCs:CODIGO_DE_SUBAPLICACION_Type"/>
+            <xs:element name="indIndrean" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="subTipCo" type="TDCs:CODIGO_ALFANUM_2_Type"/>
+            <xs:element name="indPeticion" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="paisBeneficiario" type="TDCs:STRING_35_Type"/>
+            <xs:element name="bancoOrdenante" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="contratoLocal" type="TDCc:CONTRATO_LOCAL_Type"/>
+            <xs:element name="contratoPartenon" type="TDCc:CONTRATO_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="EMPRESA" type="TDCs:EMPRESA_Type"/>
+            <xs:element name="CENTRO" type="TDCs:CODIGO_CENTRO_Type"/>
+            <xs:element name="branch" type="TDCs:STRING_3_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="contrato" type="TDCc:CONTRATO_Type"/>
+            <xs:element name="cliente" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+            <xs:element name="canal" type="TDCs:CODIGO_DE_CANAL_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="empresa" type="TDCs:EMPRESA_Type"/>
+            <xs:element name="canal" type="TDCs:CODIGO_DE_CANAL_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_S_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="codigoMensajeOk" type="TDCs:CODIGO_MENSAJE_APP_Type"/>
+            <xs:element name="ordenAltServ" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+            <xs:element name="descOk" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_E_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_E</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="cuentaNominal" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+            <xs:element name="cuentaGastos" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+            <xs:element name="nombreBenef" type="TDCs:NOMBRE_DE_PERSONA_Type"/>
+            <xs:element name="domicilioBenef" type="TDCc:DOMICILIO_CORPORATIVO_Type"/>
+            <xs:element name="plazaBenef" type="TDCs:NOMBRE_LARGO_Type"/>
+            <xs:element name="descriPaiBenef" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="cuentaBenef" type="TDCs:CUENTA_GENERAL_Type"/>
+            <xs:element name="indResiBenef" type="TDCs:INDICADOR_SI-NO_Type"/>
+            <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+            <xs:element name="domBanBen" type="TDCc:DOMICILIO_CORPORATIVO_Type"/>
+            <xs:element name="plaBanBen" type="TDCs:NOMBRE_LARGO_Type"/>
+            <xs:element name="descPaiBanBen" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+            <xs:element name="seguroCambio" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+            <xs:element name="impSegCambio" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="paisDestino" type="TDCs:PAIS_Type"/>
+            <xs:element name="personaCliente" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+            <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impCargo" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="indUrgen" type="TDCs:INDICADOR_SI-NO_Type"/>
+            <xs:element name="indDesglose" type="TDCs:INDICADOR_SI-NO_Type"/>
+            <xs:element name="indCarta" type="TDCs:TIP_ENVIO_CORRESPONDENCIA_Type"/>
+            <xs:element name="indGastos" type="TDCs:GASTOS_POR_CUENTA_DE_Type"/>
+            <xs:element name="detPag1" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="detPag2" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="detPag3" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="detPag4" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="claveInfBan1" type="TDCs:NOMBRE_CORTO_Type"/>
+            <xs:element name="detInfBan1" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="claveInfBan2" type="TDCs:NOMBRE_CORTO_Type"/>
+            <xs:element name="detInfBan2" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="claveInfBan3" type="TDCs:NOMBRE_CORTO_Type"/>
+            <xs:element name="detInfBan3" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="claveInfBan4" type="TDCs:NOMBRE_CORTO_Type"/>
+            <xs:element name="detInfBan4" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="claveInfBan5" type="TDCs:NOMBRE_CORTO_Type"/>
+            <xs:element name="detInfBan5" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="claveInfBan6" type="TDCs:NOMBRE_CORTO_Type"/>
+            <xs:element name="detInfBan6" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="referencia" type="TDCs:NOMBRE_MEDIO_Type"/>
+            <xs:element name="descPartAranc" type="TDCs:CODIGO_ALFANUM_6_Type"/>
+            <xs:element name="impJust" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="clavComunicBE" type="TDCs:PROCEDENCIA_DEL_FONDO_Type"/>
+            <xs:element name="numOF" type="TDCs:CODIGO_ALFANUM_8_Type"/>
+            <xs:element name="nifEmisor" type="TDCc:IDENT_OFICIAL_PERSONA_Type"/>
+            <xs:element name="codIsin" type="TDCs:CODIGO_ISIN_Type"/>
+            <xs:element name="codDocum" type="TDCc:IDENT_OFICIAL_PERSONA_Type"/>
+            <xs:element name="codPaisR" type="TDCs:PAIS_Type"/>
+            <xs:element name="perfil" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523_Type"/>
+            <xs:element name="nomBanBen" type="TDCs:NOMBRE_LARGO_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="salidaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_realizarSeguridadOperativa_19523_Type"/>
+            <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+            <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+            <xs:element name="retorno" type="TDCs:CODIGO_DE_RETORNO_Type"/>
+            <xs:element name="ordenEmi" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+            <xs:element name="impCarg" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impLiq1" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impLiq2" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impComis1" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impComis2" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="datos">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="dato">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="conLiq" type="TDCs:CONCEPTO_DE_LIQUIDACION_Type"/>
+                                    <xs:element name="impConcLiq1" type="TDCc:IMPORTE_Type"/>
+                                    <xs:element name="impConcLiq2" type="TDCc:IMPORTE_Type"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="indDup" type="TDCs:INDICADOR_SI-NO_Type"/>
+            <xs:element name="kcError" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_kcError_19523_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_realizarSeguridadOperativa_19523_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Centro" type="TDCc:CENTRO_Type"/>
+            <xs:element name="TextoMensajeError" type="TDCs:DESCRIPCION_LARGA_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_kcError_19523_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="siguientePeticion" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="siguiente" type="TDCs:DESCRIPCION_BREVE_Type"/>
+            <xs:element name="descError" type="TDCs:DESCRIPCION_LARGA_Type"/>
+            <xs:element name="codError" type="TDCs:CODIGO_ERROR_APP_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_E_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_E</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="nombreBenef" type="TDCs:NOMBRE_DE_PERSONA_Type"/>
+            <xs:element name="domicilioBenef" type="TDCc:DOMICILIO_CORPORATIVO_Type"/>
+            <xs:element name="plazaBenef" type="TDCs:NOMBRE_LARGO_Type"/>
+            <xs:element name="cuentaBenef" type="TDCs:CUENTA_GENERAL_Type"/>
+            <xs:element name="codPostal" type="TDCs:STRING_35_Type"/>
+            <xs:element name="personaCliente" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+            <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impCargo" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="codPais" type="TDCs:PAIS_Type"/>
+            <xs:element name="cuentaOrdenante" type="TDCs:CUENTA_GENERAL_Type"/>
+            <xs:element name="indPeticion" type="TDCs:INDICADOR_GENERICO_Type"/>
+            <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+            <xs:element name="concepto" type="TDCs:STRING_35_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="impCarg" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impLiq1" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impLiq2" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+            <xs:element name="retorno" type="TDCs:CODIGO_DE_RETORNO_Type"/>
+            <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+            <xs:element name="ordenEmi" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+            <xs:element name="datosConcepLiq" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.listaConcepLiq_Type"/>
+            <xs:element name="motivoRetroc" type="TDCs:STRING_60_Type"/>
+            <xs:element name="codigoMensajeOk" type="TDCs:CODIGO_MENSAJE_APP_Type"/>
+            <xs:element name="descOk" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.listaConcepLiq_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="dato" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.estructConcepLiq_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.estructConcepLiq_Type">
+        <xs:annotation>
+            <xs:appinfo>ContextBean</xs:appinfo>
+            <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S</xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="conLiq" type="TDCs:CONCEPTO_DE_LIQUIDACION_Type"/>
+            <xs:element name="impConcep1" type="TDCc:IMPORTE_Type"/>
+            <xs:element name="impConcep2" type="TDCc:IMPORTE_Type"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

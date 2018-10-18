@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="0ba92709-7b44-4cea-9fff-3ddbd5528b0c" activeEnvironment="Default" name="AbbeySoap" resourceRoot="${projectDir}" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="3dcb60eb-e514-41d6-9183-88fb8fe8b87e" wsaVersion="NONE" name="ESHHMPWSSoapBindingHTTP" type="wsdl" bindingName="{http://new.webservice.namespace}ESHHMPWSSoapBindingHTTP" soapVersion="1_1" anonymous="optional" definition="ESHHMPWS.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/home/user/workspace/proyectos/fxpay/soap/ABBEY/ESHHMPWS.wsdl"><con:part><con:url>file:/home/user/workspace/proyectos/fxpay/soap/ABBEY/ESHHMPWS.wsdl</con:url><con:content><![CDATA[<definitions targetNamespace="http://new.webservice.namespace" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:TDCs="http://simple.webservices.citd.isb.com" xmlns:cbtypes="http://cbtypes.webservices.isb.com" xmlns:faultExceptions="http://faultExceptions.webservices.isb.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://new.webservice.namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <documentation>Webservice del módulo ValEmis</documentation>
+  <types>
+    <xs:schema targetNamespace="http://new.webservice.namespace">
+      <xs:import namespace="http://faultExceptions.webservices.isb.com" schemaLocation="./schemas/faultExceptions.xsd"/>
+      <xs:import namespace="http://cbtypes.webservices.isb.com" schemaLocation="./schemas/cb_types.xsd"/>
+      <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./schemas/ws_TDCs.xsd"/>
+      <xs:element name="altaOrdenFinanciadaOA">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entrada" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E_Type">
+              <xs:annotation>
+                <xs:documentation>entrada</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="entradaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+              <xs:annotation>
+                <xs:documentation>entrada seguridad</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="perfil" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523_Type">
+              <xs:annotation>
+                <xs:documentation>perfil</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute fixed="ESHHMPWS" name="facade" type="TDCs:DESCRIPCION_GENERAL_Type"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="altaOrdenFinanciadaOAResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="methodResult" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_S_Type">
+              <xs:annotation>
+                <xs:documentation>salida</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="valEmisPerio_19523">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entrada" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_E_Type">
+              <xs:annotation>
+                <xs:documentation>entrada</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="entradaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+              <xs:annotation>
+                <xs:documentation>entradaSeg</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute fixed="ESHHMPWS" name="facade" type="TDCs:DESCRIPCION_GENERAL_Type"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="valEmisPerio_19523Response">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="methodResult" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S_Type">
+              <xs:annotation>
+                <xs:documentation>salida</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="emisOrdenEmitidaFX">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entrada" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_E_Type">
+              <xs:annotation>
+                <xs:documentation>entrada</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+            <xs:element name="entradaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+              <xs:annotation>
+                <xs:documentation>entrada Seguridad</xs:documentation>
+              </xs:annotation>
+            </xs:element>
+          </xs:sequence>
+          <xs:attribute fixed="ESHHMPWS" name="facade" type="TDCs:DESCRIPCION_GENERAL_Type"/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="emisOrdenEmitidaFXResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="methodResult" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S_Type"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </types>
+  <message name="altaOrdenFinanciadaOA_Input">
+    <part element="tns:altaOrdenFinanciadaOA" name="altaOrdenFinanciadaOA_InputPart"/>
+  </message>
+  <message name="altaOrdenFinanciadaOA_Output">
+    <part element="tns:altaOrdenFinanciadaOAResponse" name="altaOrdenFinanciadaOA_OutputPart"/>
+  </message>
+  <message name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+    <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C" name="com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_FaultPart"/>
+  </message>
+  <message name="valEmisPerio_19523_Input">
+    <part element="tns:valEmisPerio_19523" name="valEmisPerio_19523_InputPart"/>
+  </message>
+  <message name="valEmisPerio_19523_Output">
+    <part element="tns:valEmisPerio_19523Response" name="valEmisPerio_19523_OutputPart"/>
+  </message>
+  <message name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault">
+    <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523" name="com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_FaultPart"/>
+  </message>
+  <message name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault">
+    <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523" name="com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_FaultPart"/>
+  </message>
+  <message name="emisOrdenEmitidaFX_Input">
+    <part element="tns:emisOrdenEmitidaFX" name="emisOrdenEmitidaFX_InputPart"/>
+  </message>
+  <message name="emisOrdenEmitidaFX_Output">
+    <part element="tns:emisOrdenEmitidaFXResponse" name="emisOrdenEmitidaFX_OutputPart"/>
+  </message>
+  <message name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+    <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C" name="com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_FaultPart"/>
+  </message>
+  <portType name="ESHHMPWSPortTypeHTTP">
+    <operation name="valEmisPerio_19523">
+      <documentation>valEmisPerio_19523</documentation>
+      <input message="tns:valEmisPerio_19523_Input" name="valEmisPerio_19523_Input"/>
+      <output message="tns:valEmisPerio_19523_Output" name="valEmisPerio_19523_Output"/>
+      <fault message="tns:valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault" name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault"/>
+      <fault message="tns:valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault" name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault"/>
+    </operation>
+    <operation name="emisOrdenEmitidaFX">
+      <documentation>Emision y validacion de una orden emitida para FX</documentation>
+      <input message="tns:emisOrdenEmitidaFX_Input" name="emisOrdenEmitidaFX_Input"/>
+      <output message="tns:emisOrdenEmitidaFX_Output" name="emisOrdenEmitidaFX_Output"/>
+      <fault message="tns:emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault"/>
+    </operation>
+    <operation name="altaOrdenFinanciadaOA">
+      <documentation>altaOrdenFinanciadaOA</documentation>
+      <input message="tns:altaOrdenFinanciadaOA_Input" name="altaOrdenFinanciadaOA_Input"/>
+      <output message="tns:altaOrdenFinanciadaOA_Output" name="altaOrdenFinanciadaOA_Output"/>
+      <fault message="tns:altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault"/>
+    </operation>
+  </portType>
+  <binding name="ESHHMPWSSoapBindingHTTP" type="tns:ESHHMPWSPortTypeHTTP">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="valEmisPerio_19523">
+      <soap:operation soapAction="http://new.webservice.namespace/valEmisPerio_19523" style="document"/>
+      <input name="valEmisPerio_19523_Input">
+        <soap:body use="literal"/>
+      </input>
+      <output name="valEmisPerio_19523_Output">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault">
+        <soap:fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault" use="literal"/>
+      </fault>
+      <fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault">
+        <soap:fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="emisOrdenEmitidaFX">
+      <soap:operation soapAction="http://new.webservice.namespace/emisOrdenEmitidaFX" style="document"/>
+      <input name="emisOrdenEmitidaFX_Input">
+        <soap:body use="literal"/>
+      </input>
+      <output name="emisOrdenEmitidaFX_Output">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+        <soap:fault name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="altaOrdenFinanciadaOA">
+      <soap:operation soapAction="http://new.webservice.namespace/altaOrdenFinanciadaOA" style="document"/>
+      <input name="altaOrdenFinanciadaOA_Input">
+        <soap:body use="literal"/>
+      </input>
+      <output name="altaOrdenFinanciadaOA_Output">
+        <soap:body use="literal"/>
+      </output>
+      <fault name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+        <soap:fault name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="ESHHMPWS_Service">
+    <port binding="tns:ESHHMPWSSoapBindingHTTP" name="ESHHMPWSPortHTTP">
+      <soap:address location="http://180.102.41.196:8080/ESHHMP_INT_ESCE/ws/ESHHMP_Def_Listener"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/home/user/workspace/proyectos/fxpay/soap/ABBEY/schemas/faultExceptions.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://faultExceptions.webservices.isb.com" xmlns:TDCs="http://simple.webservices.citd.isb.com" xmlns:tns="http://faultExceptions.webservices.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./ws_TDCs.xsd"/>
+  <xs:element name="com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codigo" type="TDCs:CODIGO_ERROR_APP_Type"/>
+        <xs:element name="descError" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="kcExcepcion">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo" type="TDCs:CODIGO_ERROR_APP_Type"/>
+              <xs:element name="descripcion" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="codError" type="TDCs:CODIGO_ERROR_APP_Type"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/user/workspace/proyectos/fxpay/soap/ABBEY/schemas/ws_TDCs.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://simple.webservices.citd.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="PROCEDENCIA_DEL_FONDO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NUMERO_DE_PERSONA_Type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-999999999"/>
+      <xs:maxInclusive value="+999999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TIP_INSTRUCCION_ORDEN_PE_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_MENSAJE_APP_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EMPRESA_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NOMBRE_DE_PERSONA_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="250"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="EMPRESA_DEL_CENTRO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ORDEN_Type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-999"/>
+      <xs:maxInclusive value="+999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NUMERO_IMPORTE_Type">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-99999999999999999.99"/>
+      <xs:maxInclusive value="+99999999999999999.99"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CONTR_LOCAL_LOCALIZACION_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="GASTOS_POR_CUENTA_DE_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z]|[ ]|[Ñ]|[ñ]){1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FORMATO_DOMICILIO_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NUMERO_OPERACION_DGO_Type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-99999999"/>
+      <xs:maxInclusive value="+99999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NOMBRE_MEDIO_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DESCRIPCION_EXTRALARGA_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="4000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DIVISA_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NOMBRE_LARGO_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TIP_ENVIO_CORRESPONDENCIA_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_DE_PRODUCTO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_DE_SUBAPLICACION_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BIC_ISO_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="11"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DESCRIPCION_BREVE_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ABBEY_BOOLEAN_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([T|t][R|r][U|u][E|e])|([F|f][A|a][L|l][S|s][E|e]){0,5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_DOCUMENTO_OFICIAL_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="9"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PAIS_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NOMBRE_CORTO_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FECHA_GENERICA_Type">
+    <xs:restriction base="xs:date"/>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_ISIN_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[Ñ]|[ñ]){12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="STRING_60_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="60"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NUMERO_DE_ORDEN_SERVICIO_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){7}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_DE_CANAL_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_ALFANUM_2_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ABBEY_SHORT_Type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-99999"/>
+      <xs:maxInclusive value="+99999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="STRING_35_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="35"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ABBEY_STRING_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="60000"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TEXTO_MULTILINEA_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="8200"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TIPO_CONTRATO_LOCAL_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CANTIDAD_Type">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="-9999999"/>
+      <xs:maxInclusive value="+9999999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="INDICADOR_SI-NO_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S"/>
+      <xs:enumeration value="N"/>
+      <xs:enumeration value="s"/>
+      <xs:enumeration value="n"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DESCRIPCION_GENERAL_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="500"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_TERMINAL_DGO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_ALFANUM_6_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_ALFANUM_8_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="8"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="INDICADOR_GENERICO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TIPO_DOC_IDENTIFICACION_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z]|[ ]|[Ñ]|[ñ]){1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TIPO_DE_PERSONA_Type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="F"/>
+      <xs:enumeration value="J"/>
+      <xs:enumeration value="G"/>
+      <xs:enumeration value="f"/>
+      <xs:enumeration value="j"/>
+      <xs:enumeration value="g"/>
+      <xs:enumeration value=" "/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CONCEPTO_DE_LIQUIDACION_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DESCRIPCION_LARGA_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="999"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_ERROR_APP_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="40"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_DE_RETORNO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CUENTA_GENERAL_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="34"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DOMICILIO_TRANSITO_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="280"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CODIGO_CENTRO_Type">
+    <xs:restriction base="xs:string">
+      <xs:length value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="NUMERO_CUENTA_INTERNO_Type">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){7}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="STRING_3_Type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="0"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/user/workspace/proyectos/fxpay/soap/ABBEY/schemas/cb_types.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://cbtypes.webservices.isb.com" xmlns:TDCc="http://composite.webservices.citd.isb.com" xmlns:TDCs="http://simple.webservices.citd.isb.com" xmlns:cbtypes="http://cbtypes.webservices.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./ws_TDCs.xsd"/>
+  <xs:import namespace="http://composite.webservices.citd.isb.com" schemaLocation="./ws_TDCc.xsd"/>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="cuentaCargo" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+      <xs:element name="cuentaGastos" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+      <xs:element name="bancoCorresponsal" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+      <xs:element name="bancoBeneficiario" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+      <xs:element name="bancoCorresponsalRecep" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+      <xs:element name="bancoBeneficiario07" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+      <xs:element name="bancoIntermediario" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+      <xs:element name="bancoReceptor" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+      <xs:element name="codCanal" type="TDCs:CODIGO_DE_CANAL_Type"/>
+      <xs:element name="descDirBeneficiario" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="nombreBeneficiario" type="TDCs:NOMBRE_DE_PERSONA_Type"/>
+      <xs:element name="descPlaza" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="ctaBeneficiario" type="TDCs:CUENTA_GENERAL_Type"/>
+      <xs:element name="descDetalleGasto2" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descDetalleGasto1" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descDetalleGasto4" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descDetalleGasto7" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="impOperacion" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impCargo" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="indUrgencia" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="descInfoBanco11" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco13" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco21" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco22" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco31" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco32" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco41" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco42" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco51" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco52" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco61" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descInfoBanco62" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="paisDestino" type="TDCs:PAIS_Type"/>
+      <xs:element name="indTipoComisiones" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="persona" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+      <xs:element name="fechaOperacion" type="TDCs:FECHA_GENERICA_Type"/>
+      <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+      <xs:element name="ordenOrigen" type="TDCc:INSTRUCCION_SERVICIO_PE_Type"/>
+      <xs:element name="centroAuxContable" type="TDCc:CENTRO_Type"/>
+      <xs:element name="codAplicacion" type="TDCs:CODIGO_ALFANUM_2_Type"/>
+      <xs:element name="codTiboB7" type="TDCs:CODIGO_ALFANUM_2_Type"/>
+      <xs:element name="indGenEstadoEntrada" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="indGenResibenEntradaPic" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="opDGO" type="TDCc:OPERACION_DGO_Type"/>
+      <xs:element name="codSubaplic" type="TDCs:CODIGO_DE_SUBAPLICACION_Type"/>
+      <xs:element name="indIndrean" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="subTipCo" type="TDCs:CODIGO_ALFANUM_2_Type"/>
+      <xs:element name="indPeticion" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="paisBeneficiario" type="TDCs:STRING_35_Type"/>
+      <xs:element name="bancoOrdenante" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="contratoLocal" type="TDCc:CONTRATO_LOCAL_Type"/>
+      <xs:element name="contratoPartenon" type="TDCc:CONTRATO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.EstructuraBanco_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EMPRESA" type="TDCs:EMPRESA_Type"/>
+      <xs:element name="CENTRO" type="TDCs:CODIGO_CENTRO_Type"/>
+      <xs:element name="branch" type="TDCs:STRING_3_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="contrato" type="TDCc:CONTRATO_Type"/>
+      <xs:element name="cliente" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+      <xs:element name="canal" type="TDCs:CODIGO_DE_CANAL_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="empresa" type="TDCs:EMPRESA_Type"/>
+      <xs:element name="canal" type="TDCs:CODIGO_DE_CANAL_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_S_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="codigoMensajeOk" type="TDCs:CODIGO_MENSAJE_APP_Type"/>
+      <xs:element name="ordenAltServ" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+      <xs:element name="descOk" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_E_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_E</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="cuentaNominal" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+      <xs:element name="cuentaGastos" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_CuentaNueva_19523_Type"/>
+      <xs:element name="nombreBenef" type="TDCs:NOMBRE_DE_PERSONA_Type"/>
+      <xs:element name="domicilioBenef" type="TDCc:DOMICILIO_CORPORATIVO_Type"/>
+      <xs:element name="plazaBenef" type="TDCs:NOMBRE_LARGO_Type"/>
+      <xs:element name="descriPaiBenef" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="cuentaBenef" type="TDCs:CUENTA_GENERAL_Type"/>
+      <xs:element name="indResiBenef" type="TDCs:INDICADOR_SI-NO_Type"/>
+      <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+      <xs:element name="domBanBen" type="TDCc:DOMICILIO_CORPORATIVO_Type"/>
+      <xs:element name="plaBanBen" type="TDCs:NOMBRE_LARGO_Type"/>
+      <xs:element name="descPaiBanBen" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+      <xs:element name="seguroCambio" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+      <xs:element name="impSegCambio" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="paisDestino" type="TDCs:PAIS_Type"/>
+      <xs:element name="personaCliente" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+      <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impCargo" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="indUrgen" type="TDCs:INDICADOR_SI-NO_Type"/>
+      <xs:element name="indDesglose" type="TDCs:INDICADOR_SI-NO_Type"/>
+      <xs:element name="indCarta" type="TDCs:TIP_ENVIO_CORRESPONDENCIA_Type"/>
+      <xs:element name="indGastos" type="TDCs:GASTOS_POR_CUENTA_DE_Type"/>
+      <xs:element name="detPag1" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="detPag2" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="detPag3" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="detPag4" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="claveInfBan1" type="TDCs:NOMBRE_CORTO_Type"/>
+      <xs:element name="detInfBan1" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="claveInfBan2" type="TDCs:NOMBRE_CORTO_Type"/>
+      <xs:element name="detInfBan2" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="claveInfBan3" type="TDCs:NOMBRE_CORTO_Type"/>
+      <xs:element name="detInfBan3" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="claveInfBan4" type="TDCs:NOMBRE_CORTO_Type"/>
+      <xs:element name="detInfBan4" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="claveInfBan5" type="TDCs:NOMBRE_CORTO_Type"/>
+      <xs:element name="detInfBan5" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="claveInfBan6" type="TDCs:NOMBRE_CORTO_Type"/>
+      <xs:element name="detInfBan6" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="referencia" type="TDCs:NOMBRE_MEDIO_Type"/>
+      <xs:element name="descPartAranc" type="TDCs:CODIGO_ALFANUM_6_Type"/>
+      <xs:element name="impJust" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="clavComunicBE" type="TDCs:PROCEDENCIA_DEL_FONDO_Type"/>
+      <xs:element name="numOF" type="TDCs:CODIGO_ALFANUM_8_Type"/>
+      <xs:element name="nifEmisor" type="TDCc:IDENT_OFICIAL_PERSONA_Type"/>
+      <xs:element name="codIsin" type="TDCs:CODIGO_ISIN_Type"/>
+      <xs:element name="codDocum" type="TDCc:IDENT_OFICIAL_PERSONA_Type"/>
+      <xs:element name="codPaisR" type="TDCs:PAIS_Type"/>
+      <xs:element name="perfil" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523_Type"/>
+      <xs:element name="nomBanBen" type="TDCs:NOMBRE_LARGO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="salidaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_realizarSeguridadOperativa_19523_Type"/>
+      <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+      <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+      <xs:element name="retorno" type="TDCs:CODIGO_DE_RETORNO_Type"/>
+      <xs:element name="ordenEmi" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+      <xs:element name="impCarg" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impLiq1" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impLiq2" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impComis1" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impComis2" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="datos">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="dato">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="conLiq" type="TDCs:CONCEPTO_DE_LIQUIDACION_Type"/>
+                  <xs:element name="impConcLiq1" type="TDCc:IMPORTE_Type"/>
+                  <xs:element name="impConcLiq2" type="TDCc:IMPORTE_Type"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="indDup" type="TDCs:INDICADOR_SI-NO_Type"/>
+      <xs:element name="kcError" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_kcError_19523_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_realizarSeguridadOperativa_19523_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Centro" type="TDCc:CENTRO_Type"/>
+      <xs:element name="TextoMensajeError" type="TDCs:DESCRIPCION_LARGA_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.CB_kcError_19523_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="siguientePeticion" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="siguiente" type="TDCs:DESCRIPCION_BREVE_Type"/>
+      <xs:element name="descError" type="TDCs:DESCRIPCION_LARGA_Type"/>
+      <xs:element name="codError" type="TDCs:CODIGO_ERROR_APP_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_E_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_E</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="nombreBenef" type="TDCs:NOMBRE_DE_PERSONA_Type"/>
+      <xs:element name="domicilioBenef" type="TDCc:DOMICILIO_CORPORATIVO_Type"/>
+      <xs:element name="plazaBenef" type="TDCs:NOMBRE_LARGO_Type"/>
+      <xs:element name="cuentaBenef" type="TDCs:CUENTA_GENERAL_Type"/>
+      <xs:element name="codPostal" type="TDCs:STRING_35_Type"/>
+      <xs:element name="personaCliente" type="TDCc:NUM_PERSONA_CLIENTE_Type"/>
+      <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impCargo" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="codPais" type="TDCs:PAIS_Type"/>
+      <xs:element name="cuentaOrdenante" type="TDCs:CUENTA_GENERAL_Type"/>
+      <xs:element name="indPeticion" type="TDCs:INDICADOR_GENERICO_Type"/>
+      <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+      <xs:element name="concepto" type="TDCs:STRING_35_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="impCarg" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impOperac" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impLiq1" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impLiq2" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="fechaValor" type="TDCs:FECHA_GENERICA_Type"/>
+      <xs:element name="retorno" type="TDCs:CODIGO_DE_RETORNO_Type"/>
+      <xs:element name="bancoBenefA" type="TDCs:BIC_ISO_Type"/>
+      <xs:element name="ordenEmi" type="TDCc:ORDEN_DE_SERVICIO_Type"/>
+      <xs:element name="datosConcepLiq" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.listaConcepLiq_Type"/>
+      <xs:element name="motivoRetroc" type="TDCs:STRING_60_Type"/>
+      <xs:element name="codigoMensajeOk" type="TDCs:CODIGO_MENSAJE_APP_Type"/>
+      <xs:element name="descOk" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.listaConcepLiq_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="dato" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.estructConcepLiq_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="com.isb.al.hhmipa.valemis.m.cb.estructConcepLiq_Type">
+    <xs:annotation>
+      <xs:appinfo>ContextBean</xs:appinfo>
+      <xs:appinfo>com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S</xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="conLiq" type="TDCs:CONCEPTO_DE_LIQUIDACION_Type"/>
+      <xs:element name="impConcep1" type="TDCc:IMPORTE_Type"/>
+      <xs:element name="impConcep2" type="TDCc:IMPORTE_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/home/user/workspace/proyectos/fxpay/soap/ABBEY/schemas/ws_TDCc.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://composite.webservices.citd.isb.com" xmlns:TDC_Simple="http://simple.webservices.citd.isb.com" xmlns:tns="http://composite.webservices.citd.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./ws_TDCs.xsd"/>
+  <xs:complexType name="CENTRO_DE_CONTRATO_Type">
+    <xs:sequence>
+      <xs:element name="EMPRESA" type="TDC_Simple:EMPRESA_DEL_CENTRO_Type"/>
+      <xs:element name="CENTRO" type="TDC_Simple:CODIGO_CENTRO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CENTRO_Type">
+    <xs:sequence>
+      <xs:element name="EMPRESA" type="TDC_Simple:EMPRESA_Type"/>
+      <xs:element name="CENTRO" type="TDC_Simple:CODIGO_CENTRO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OPERACION_DGO_Type">
+    <xs:sequence>
+      <xs:element name="CENTRO" type="tns:CENTRO_DE_CONTRATO_Type"/>
+      <xs:element name="CODIGO_TERMINAL_DGO" type="TDC_Simple:CODIGO_TERMINAL_DGO_Type"/>
+      <xs:element name="NUMERO_DGO" type="TDC_Simple:NUMERO_OPERACION_DGO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IMPORTE_Type">
+    <xs:sequence>
+      <xs:element name="IMPORTE" type="TDC_Simple:NUMERO_IMPORTE_Type"/>
+      <xs:element name="DIVISA" type="TDC_Simple:DIVISA_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ORDEN_DE_SERVICIO_Type">
+    <xs:sequence>
+      <xs:element name="CENTRO" type="tns:CENTRO_Type"/>
+      <xs:element name="PRODUCTO" type="TDC_Simple:CODIGO_DE_PRODUCTO_Type"/>
+      <xs:element name="NUMERO_DE_ORDEN" type="TDC_Simple:NUMERO_DE_ORDEN_SERVICIO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CONTRATO_Type">
+    <xs:sequence>
+      <xs:element name="CENTRO" type="tns:CENTRO_DE_CONTRATO_Type"/>
+      <xs:element name="PRODUCTO" type="TDC_Simple:CODIGO_DE_PRODUCTO_Type"/>
+      <xs:element name="NUMERO_DE_CONTRATO" type="TDC_Simple:NUMERO_CUENTA_INTERNO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CONTRATO_LOCAL_Type">
+    <xs:sequence>
+      <xs:element name="TIPO_CONTRATO_LOCAL" type="TDC_Simple:TIPO_CONTRATO_LOCAL_Type"/>
+      <xs:element name="DETALLE_CONTRATO_LOCAL" type="TDC_Simple:CONTR_LOCAL_LOCALIZACION_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NUM_PERSONA_CLIENTE_Type">
+    <xs:sequence>
+      <xs:element name="TIPO_DE_PERSONA" type="TDC_Simple:TIPO_DE_PERSONA_Type"/>
+      <xs:element name="CODIGO_DE_PERSONA" type="TDC_Simple:NUMERO_DE_PERSONA_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IDENT_OFICIAL_PERSONA_Type">
+    <xs:sequence>
+      <xs:element name="TIPO_DOCUMENTO_OFIC" type="TDC_Simple:TIPO_DOC_IDENTIFICACION_Type"/>
+      <xs:element name="CODIGO_DE_DOCUMENTO" type="TDC_Simple:CODIGO_DOCUMENTO_OFICIAL_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DOMICILIO_CORPORATIVO_Type">
+    <xs:sequence>
+      <xs:element name="FORMATO_DOMICILIO" type="TDC_Simple:FORMATO_DOMICILIO_Type"/>
+      <xs:element name="DETALLE_DOMICILIO" type="TDC_Simple:DOMICILIO_TRANSITO_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="INSTRUCCION_SERVICIO_PE_Type">
+    <xs:sequence>
+      <xs:element name="ORDEN_DE_SERVICIO" type="tns:ORDEN_DE_SERVICIO_Type"/>
+      <xs:element name="INTRUCCION_ORDEN_PE" type="TDC_Simple:TIP_INSTRUCCION_ORDEN_PE_Type"/>
+      <xs:element name="ORDEN" type="TDC_Simple:ORDEN_Type"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://180.102.41.196:8080/ESHHMP_INT_ESCE/ws/ESHHMP_Def_Listener</con:endpoint><con:endpoint>http://ubuntu:8088/mockESHHMPWSSoapBindingHTTP</con:endpoint></con:endpoints><con:operation id="88b13952-d7a8-4593-b9e8-e0c2a84b7f70" isOneWay="false" action="http://new.webservice.namespace/altaOrdenFinanciadaOA" name="altaOrdenFinanciadaOA" bindingOperationName="altaOrdenFinanciadaOA" type="Request-Response" outputName="altaOrdenFinanciadaOA_Output" inputName="altaOrdenFinanciadaOA_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="264a5d88-fce3-4fc3-b87e-8dfbbd8b9c94" name="RequestAltaOrdenFinanciadaOA"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ubuntu:8088/mockESHHMPWSSoapBindingHTTP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:altaOrdenFinanciadaOA facade="ESHHMPWS">
+         <entrada>
+            <cuentaCargo>
+               <contratoLocal>
+                  <TIPO_CONTRATO_LOCAL>1</TIPO_CONTRATO_LOCAL>
+                  <DETALLE_CONTRATO_LOCAL>2</DETALLE_CONTRATO_LOCAL>
+               </contratoLocal>
+               <contratoPartenon>
+                  <CENTRO>
+                     <EMPRESA>3</EMPRESA>
+                     <CENTRO>4</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>5</PRODUCTO>
+                  <NUMERO_DE_CONTRATO>6</NUMERO_DE_CONTRATO>
+               </contratoPartenon>
+            </cuentaCargo>
+            <cuentaGastos>
+               <contratoLocal>
+                  <TIPO_CONTRATO_LOCAL>7</TIPO_CONTRATO_LOCAL>
+                  <DETALLE_CONTRATO_LOCAL>8</DETALLE_CONTRATO_LOCAL>
+               </contratoLocal>
+               <contratoPartenon>
+                  <CENTRO>
+                     <EMPRESA>9</EMPRESA>
+                     <CENTRO>10</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>11</PRODUCTO>
+                  <NUMERO_DE_CONTRATO>12</NUMERO_DE_CONTRATO>
+               </contratoPartenon>
+            </cuentaGastos>
+            <bancoCorresponsal>
+               <EMPRESA>13</EMPRESA>
+               <CENTRO>14</CENTRO>
+               <branch>15</branch>
+            </bancoCorresponsal>
+            <bancoBeneficiario>
+               <EMPRESA>16</EMPRESA>
+               <CENTRO>17</CENTRO>
+               <branch>18</branch>
+            </bancoBeneficiario>
+            <bancoCorresponsalRecep>
+               <EMPRESA>19</EMPRESA>
+               <CENTRO>20</CENTRO>
+               <branch>21</branch>
+            </bancoCorresponsalRecep>
+            <bancoBeneficiario07>
+               <EMPRESA>22</EMPRESA>
+               <CENTRO>23</CENTRO>
+               <branch>24</branch>
+            </bancoBeneficiario07>
+            <bancoIntermediario>
+               <EMPRESA>25</EMPRESA>
+               <CENTRO>26</CENTRO>
+               <branch>27</branch>
+            </bancoIntermediario>
+            <bancoReceptor>
+               <EMPRESA>28</EMPRESA>
+               <CENTRO>29</CENTRO>
+               <branch>30</branch>
+            </bancoReceptor>
+            <codCanal>31</codCanal>
+            <descDirBeneficiario>32</descDirBeneficiario>
+            <nombreBeneficiario>33</nombreBeneficiario>
+            <descPlaza>34</descPlaza>
+            <ctaBeneficiario>35</ctaBeneficiario>
+            <descDetalleGasto2>36</descDetalleGasto2>
+            <descDetalleGasto1>37</descDetalleGasto1>
+            <descDetalleGasto4>38</descDetalleGasto4>
+            <descDetalleGasto7>39</descDetalleGasto7>
+            <impOperacion>
+               <IMPORTE>40</IMPORTE>
+               <DIVISA>41</DIVISA>
+            </impOperacion>
+            <impCargo>
+               <IMPORTE>42</IMPORTE>
+               <DIVISA>43</DIVISA>
+            </impCargo>
+            <indUrgencia>44</indUrgencia>
+            <descInfoBanco11>45</descInfoBanco11>
+            <descInfoBanco13>46</descInfoBanco13>
+            <descInfoBanco21>47</descInfoBanco21>
+            <descInfoBanco22>48</descInfoBanco22>
+            <descInfoBanco31>49</descInfoBanco31>
+            <descInfoBanco32>50</descInfoBanco32>
+            <descInfoBanco41>51</descInfoBanco41>
+            <descInfoBanco42>52</descInfoBanco42>
+            <descInfoBanco51>53</descInfoBanco51>
+            <descInfoBanco52>54</descInfoBanco52>
+            <descInfoBanco61>55</descInfoBanco61>
+            <descInfoBanco62>56</descInfoBanco62>
+            <paisDestino>57</paisDestino>
+            <indTipoComisiones>58</indTipoComisiones>
+            <persona>
+               <TIPO_DE_PERSONA>59</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>60</CODIGO_DE_PERSONA>
+            </persona>
+            <fechaOperacion>61</fechaOperacion>
+            <fechaValor>62</fechaValor>
+            <ordenOrigen>
+               <ORDEN_DE_SERVICIO>
+                  <CENTRO>
+                     <EMPRESA>63</EMPRESA>
+                     <CENTRO>64</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>65</PRODUCTO>
+                  <NUMERO_DE_ORDEN>66</NUMERO_DE_ORDEN>
+               </ORDEN_DE_SERVICIO>
+               <INTRUCCION_ORDEN_PE>67</INTRUCCION_ORDEN_PE>
+               <ORDEN>68</ORDEN>
+            </ordenOrigen>
+            <centroAuxContable>
+               <EMPRESA>69</EMPRESA>
+               <CENTRO>70</CENTRO>
+            </centroAuxContable>
+            <codAplicacion>71</codAplicacion>
+            <codTiboB7>72</codTiboB7>
+            <indGenEstadoEntrada>73</indGenEstadoEntrada>
+            <indGenResibenEntradaPic>74</indGenResibenEntradaPic>
+            <opDGO>
+               <CENTRO>
+                  <EMPRESA>75</EMPRESA>
+                  <CENTRO>76</CENTRO>
+               </CENTRO>
+               <CODIGO_TERMINAL_DGO>77</CODIGO_TERMINAL_DGO>
+               <NUMERO_DGO>78</NUMERO_DGO>
+            </opDGO>
+            <codSubaplic>79</codSubaplic>
+            <indIndrean>80</indIndrean>
+            <subTipCo>81</subTipCo>
+            <indPeticion>82</indPeticion>
+            <paisBeneficiario>83</paisBeneficiario>
+            <bancoOrdenante>
+               <EMPRESA>84</EMPRESA>
+               <CENTRO>85</CENTRO>
+               <branch>86</branch>
+            </bancoOrdenante>
+         </entrada>
+         <entradaSeg>
+            <contrato>
+               <CENTRO>
+                  <EMPRESA>87</EMPRESA>
+                  <CENTRO>88</CENTRO>
+               </CENTRO>
+               <PRODUCTO>89</PRODUCTO>
+               <NUMERO_DE_CONTRATO>90</NUMERO_DE_CONTRATO>
+            </contrato>
+            <cliente>
+               <TIPO_DE_PERSONA>91</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>92</CODIGO_DE_PERSONA>
+            </cliente>
+            <canal>93</canal>
+         </entradaSeg>
+         <perfil>
+            <empresa>94</empresa>
+            <canal>95</canal>
+         </perfil>
+      </new:altaOrdenFinanciadaOA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://new.webservice.namespace/altaOrdenFinanciadaOA"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="7f445e3a-5a69-4576-aad8-cda2b422e51e" isOneWay="false" action="http://new.webservice.namespace/emisOrdenEmitidaFX" name="emisOrdenEmitidaFX" bindingOperationName="emisOrdenEmitidaFX" type="Request-Response" outputName="emisOrdenEmitidaFX_Output" inputName="emisOrdenEmitidaFX_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a56c9a34-c857-4001-a226-485dfc7b5a90" name="RequestEmisOrderEmitidaFX"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ubuntu:8088/mockESHHMPWSSoapBindingHTTP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:emisOrdenEmitidaFX facade="ESHHMPWS">
+         <entrada>
+            <nombreBenef>1</nombreBenef>
+            <domicilioBenef>
+               <FORMATO_DOMICILIO>2</FORMATO_DOMICILIO>
+               <DETALLE_DOMICILIO>3</DETALLE_DOMICILIO>
+            </domicilioBenef>
+            <plazaBenef>4</plazaBenef>
+            <cuentaBenef>5</cuentaBenef>
+            <codPostal>6</codPostal>
+            <personaCliente>
+               <TIPO_DE_PERSONA>7</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>8</CODIGO_DE_PERSONA>
+            </personaCliente>
+            <impOperac>
+               <IMPORTE>9</IMPORTE>
+               <DIVISA>10</DIVISA>
+            </impOperac>
+            <impCargo>
+               <IMPORTE>11</IMPORTE>
+               <DIVISA>12</DIVISA>
+            </impCargo>
+            <codPais>13</codPais>
+            <cuentaOrdenante>14</cuentaOrdenante>
+            <indPeticion>15</indPeticion>
+            <bancoBenefA>16</bancoBenefA>
+            <concepto>17</concepto>
+         </entrada>
+         <entradaSeg>
+            <contrato>
+               <CENTRO>
+                  <EMPRESA>18</EMPRESA>
+                  <CENTRO>19</CENTRO>
+               </CENTRO>
+               <PRODUCTO>20</PRODUCTO>
+               <NUMERO_DE_CONTRATO>21</NUMERO_DE_CONTRATO>
+            </contrato>
+            <cliente>
+               <TIPO_DE_PERSONA>22</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>23</CODIGO_DE_PERSONA>
+            </cliente>
+            <canal>24</canal>
+         </entradaSeg>
+      </new:emisOrdenEmitidaFX>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://new.webservice.namespace/emisOrdenEmitidaFX"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="0c39f66b-2b46-4aa7-b266-0848c16a47f4" isOneWay="false" action="http://new.webservice.namespace/valEmisPerio_19523" name="valEmisPerio_19523" bindingOperationName="valEmisPerio_19523" type="Request-Response" outputName="valEmisPerio_19523_Output" inputName="valEmisPerio_19523_Input" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5f911a9e-1b8f-4951-8a0a-a6e83856379d" name="RequestValEmisPerio"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ubuntu:8088/mockESHHMPWSSoapBindingHTTP</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:valEmisPerio_19523 facade="ESHHMPWS">
+         <entrada>
+            <cuentaNominal>
+               <contratoLocal>
+                  <TIPO_CONTRATO_LOCAL>1</TIPO_CONTRATO_LOCAL>
+                  <DETALLE_CONTRATO_LOCAL>2</DETALLE_CONTRATO_LOCAL>
+               </contratoLocal>
+               <contratoPartenon>
+                  <CENTRO>
+                     <EMPRESA>3</EMPRESA>
+                     <CENTRO>4</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>5</PRODUCTO>
+                  <NUMERO_DE_CONTRATO>6</NUMERO_DE_CONTRATO>
+               </contratoPartenon>
+            </cuentaNominal>
+            <cuentaGastos>
+               <contratoLocal>
+                  <TIPO_CONTRATO_LOCAL>7</TIPO_CONTRATO_LOCAL>
+                  <DETALLE_CONTRATO_LOCAL>8</DETALLE_CONTRATO_LOCAL>
+               </contratoLocal>
+               <contratoPartenon>
+                  <CENTRO>
+                     <EMPRESA>9</EMPRESA>
+                     <CENTRO>10</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>11</PRODUCTO>
+                  <NUMERO_DE_CONTRATO>12</NUMERO_DE_CONTRATO>
+               </contratoPartenon>
+            </cuentaGastos>
+            <nombreBenef>13</nombreBenef>
+            <domicilioBenef>
+               <FORMATO_DOMICILIO>14</FORMATO_DOMICILIO>
+               <DETALLE_DOMICILIO>15</DETALLE_DOMICILIO>
+            </domicilioBenef>
+            <plazaBenef>16</plazaBenef>
+            <descriPaiBenef>17</descriPaiBenef>
+            <cuentaBenef>18</cuentaBenef>
+            <indResiBenef>19</indResiBenef>
+            <bancoBenefA>20</bancoBenefA>
+            <domBanBen>
+               <FORMATO_DOMICILIO>21</FORMATO_DOMICILIO>
+               <DETALLE_DOMICILIO>22</DETALLE_DOMICILIO>
+            </domBanBen>
+            <plaBanBen>23</plaBanBen>
+            <descPaiBanBen>24</descPaiBanBen>
+            <fechaValor>25</fechaValor>
+            <seguroCambio>
+               <CENTRO>
+                  <EMPRESA>26</EMPRESA>
+                  <CENTRO>27</CENTRO>
+               </CENTRO>
+               <PRODUCTO>28</PRODUCTO>
+               <NUMERO_DE_ORDEN>29</NUMERO_DE_ORDEN>
+            </seguroCambio>
+            <impSegCambio>
+               <IMPORTE>30</IMPORTE>
+               <DIVISA>31</DIVISA>
+            </impSegCambio>
+            <paisDestino>32</paisDestino>
+            <personaCliente>
+               <TIPO_DE_PERSONA>33</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>34</CODIGO_DE_PERSONA>
+            </personaCliente>
+            <impOperac>
+               <IMPORTE>35</IMPORTE>
+               <DIVISA>36</DIVISA>
+            </impOperac>
+            <impCargo>
+               <IMPORTE>37</IMPORTE>
+               <DIVISA>38</DIVISA>
+            </impCargo>
+            <indUrgen>39</indUrgen>
+            <indDesglose>40</indDesglose>
+            <indCarta>41</indCarta>
+            <indGastos>42</indGastos>
+            <detPag1>43</detPag1>
+            <detPag2>44</detPag2>
+            <detPag3>45</detPag3>
+            <detPag4>46</detPag4>
+            <claveInfBan1>47</claveInfBan1>
+            <detInfBan1>48</detInfBan1>
+            <claveInfBan2>49</claveInfBan2>
+            <detInfBan2>50</detInfBan2>
+            <claveInfBan3>51</claveInfBan3>
+            <detInfBan3>52</detInfBan3>
+            <claveInfBan4>53</claveInfBan4>
+            <detInfBan4>54</detInfBan4>
+            <claveInfBan5>55</claveInfBan5>
+            <detInfBan5>56</detInfBan5>
+            <claveInfBan6>57</claveInfBan6>
+            <detInfBan6>58</detInfBan6>
+            <referencia>59</referencia>
+            <descPartAranc>60</descPartAranc>
+            <impJust>
+               <IMPORTE>61</IMPORTE>
+               <DIVISA>62</DIVISA>
+            </impJust>
+            <clavComunicBE>63</clavComunicBE>
+            <numOF>64</numOF>
+            <nifEmisor>
+               <TIPO_DOCUMENTO_OFIC>65</TIPO_DOCUMENTO_OFIC>
+               <CODIGO_DE_DOCUMENTO>66</CODIGO_DE_DOCUMENTO>
+            </nifEmisor>
+            <codIsin>67</codIsin>
+            <codDocum>
+               <TIPO_DOCUMENTO_OFIC>68</TIPO_DOCUMENTO_OFIC>
+               <CODIGO_DE_DOCUMENTO>69</CODIGO_DE_DOCUMENTO>
+            </codDocum>
+            <codPaisR>70</codPaisR>
+            <perfil>
+               <empresa>71</empresa>
+               <canal>72</canal>
+            </perfil>
+            <nomBanBen>73</nomBanBen>
+         </entrada>
+         <entradaSeg>
+            <contrato>
+               <CENTRO>
+                  <EMPRESA>74</EMPRESA>
+                  <CENTRO>75</CENTRO>
+               </CENTRO>
+               <PRODUCTO>76</PRODUCTO>
+               <NUMERO_DE_CONTRATO>77</NUMERO_DE_CONTRATO>
+            </contrato>
+            <cliente>
+               <TIPO_DE_PERSONA>77</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>78</CODIGO_DE_PERSONA>
+            </cliente>
+            <canal>79</canal>
+         </entradaSeg>
+      </new:valEmisPerio_19523>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://new.webservice.namespace/valEmisPerio_19523"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:mockService id="a3bb2477-7a14-4ed6-93b4-92712a14fe3c" port="8088" path="/mockESHHMPWSSoapBindingHTTP" host="ubuntu" name="AbbeyMockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="altaOrdenFinanciadaOA" id="f0111494-8ae9-4ff6-b3be-fa0907767582" interface="ESHHMPWSSoapBindingHTTP" operation="altaOrdenFinanciadaOA"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="ResponseAltaOrdenFinanciadaOA" id="2e40f73d-06af-4246-85df-55db9acca338" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:altaOrdenFinanciadaOAResponse>
+         <methodResult>
+            <codigoMensajeOk>1</codigoMensajeOk>
+            <ordenAltServ>
+               <CENTRO>
+                  <EMPRESA>2</EMPRESA>
+                  <CENTRO>3</CENTRO>
+               </CENTRO>
+               <PRODUCTO>4</PRODUCTO>
+               <NUMERO_DE_ORDEN>5</NUMERO_DE_ORDEN>
+            </ordenAltServ>
+            <descOk>6</descOk>
+         </methodResult>
+      </new:altaOrdenFinanciadaOAResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://new.webservice.namespace/altaOrdenFinanciadaOA"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="emisOrdenEmitidaFX" id="beb1ffbd-f695-4a4f-923e-b933c46898d6" interface="ESHHMPWSSoapBindingHTTP" operation="emisOrdenEmitidaFX"><con:settings/><con:defaultResponse>ResponseEmisOrdenEmitidaFX</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="ResponseEmisOrdenEmitidaFX" id="a3c7a7cc-fa58-47d1-afb4-8fd287c374da" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:emisOrdenEmitidaFXResponse>
+         <methodResult>
+            <impCarg>
+               <IMPORTE>1</IMPORTE>
+               <DIVISA>2</DIVISA>
+            </impCarg>
+            <impOperac>
+               <IMPORTE>3</IMPORTE>
+               <DIVISA>4</DIVISA>
+            </impOperac>
+            <impLiq1>
+               <IMPORTE>5</IMPORTE>
+               <DIVISA>6</DIVISA>
+            </impLiq1>
+            <impLiq2>
+               <IMPORTE>7</IMPORTE>
+               <DIVISA>8</DIVISA>
+            </impLiq2>
+            <fechaValor>9</fechaValor>
+            <retorno>10</retorno>
+            <bancoBenefA>11</bancoBenefA>
+            <ordenEmi>
+               <CENTRO>
+                  <EMPRESA>12</EMPRESA>
+                  <CENTRO>13</CENTRO>
+               </CENTRO>
+               <PRODUCTO>14</PRODUCTO>
+               <NUMERO_DE_ORDEN>15</NUMERO_DE_ORDEN>
+            </ordenEmi>
+            <datosConcepLiq>
+               <!--Zero or more repetitions:-->
+               <dato>
+                  <conLiq>16</conLiq>
+                  <impConcep1>
+                     <IMPORTE>17</IMPORTE>
+                     <DIVISA>18</DIVISA>
+                  </impConcep1>
+                  <impConcep2>
+                     <IMPORTE>19</IMPORTE>
+                     <DIVISA>20</DIVISA>
+                  </impConcep2>
+               </dato>
+            </datosConcepLiq>
+            <motivoRetroc>21</motivoRetroc>
+            <codigoMensajeOk>22</codigoMensajeOk>
+            <descOk>23</descOk>
+         </methodResult>
+      </new:emisOrdenEmitidaFXResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://new.webservice.namespace/emisOrdenEmitidaFX"/></con:response><con:dispatchConfig/></con:mockOperation><con:mockOperation name="valEmisPerio_19523" id="46129a51-2350-4471-b750-9f6252d83035" interface="ESHHMPWSSoapBindingHTTP" operation="valEmisPerio_19523"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="ResponseValEmisPerio" id="b148cae4-5aa1-43ad-bff9-84201c2b2f1f" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:valEmisPerio_19523Response>
+         <methodResult>
+            <salidaSeg>
+               <Centro>
+                  <EMPRESA>1</EMPRESA>
+                  <CENTRO>2</CENTRO>
+               </Centro>
+               <TextoMensajeError>3</TextoMensajeError>
+            </salidaSeg>
+            <bancoBenefA>4</bancoBenefA>
+            <fechaValor>5</fechaValor>
+            <retorno>6</retorno>
+            <ordenEmi>
+               <CENTRO>
+                  <EMPRESA>7</EMPRESA>
+                  <CENTRO>8</CENTRO>
+               </CENTRO>
+               <PRODUCTO>9</PRODUCTO>
+               <NUMERO_DE_ORDEN>10</NUMERO_DE_ORDEN>
+            </ordenEmi>
+            <impCarg>
+               <IMPORTE>11</IMPORTE>
+               <DIVISA>12</DIVISA>
+            </impCarg>
+            <impOperac>
+               <IMPORTE>13</IMPORTE>
+               <DIVISA>14</DIVISA>
+            </impOperac>
+            <impLiq1>
+               <IMPORTE>15</IMPORTE>
+               <DIVISA>16</DIVISA>
+            </impLiq1>
+            <impLiq2>
+               <IMPORTE>17</IMPORTE>
+               <DIVISA>18</DIVISA>
+            </impLiq2>
+            <impComis1>
+               <IMPORTE>19</IMPORTE>
+               <DIVISA>20</DIVISA>
+            </impComis1>
+            <impComis2>
+               <IMPORTE>21</IMPORTE>
+               <DIVISA>22</DIVISA>
+            </impComis2>
+            <datos>
+               <!--Zero or more repetitions:-->
+               <dato>
+                  <conLiq>23</conLiq>
+                  <impConcLiq1>
+                     <IMPORTE>24</IMPORTE>
+                     <DIVISA>25</DIVISA>
+                  </impConcLiq1>
+                  <impConcLiq2>
+                     <IMPORTE>26</IMPORTE>
+                     <DIVISA>27</DIVISA>
+                  </impConcLiq2>
+               </dato>
+            </datos>
+            <indDup>28</indDup>
+            <kcError>
+               <siguientePeticion>29</siguientePeticion>
+               <siguiente>30</siguiente>
+               <descError>31</descError>
+               <codError>32</codError>
+            </kcError>
+         </methodResult>
+      </new:valEmisPerio_19523Response>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://new.webservice.namespace/valEmisPerio_19523"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

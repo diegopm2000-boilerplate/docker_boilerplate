@@ -1,0 +1,5 @@
+nexusc-mailhog:
+  image: mailhog/mailhog
+  ports:
+    - 0.0.0.0:8025:8025
+    - 0.0.0.0:1025:1025

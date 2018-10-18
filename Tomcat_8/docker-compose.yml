@@ -1,0 +1,8 @@
+tomcat8:
+  image: diegopm2000/tomcat8
+  ports:
+    - 0.0.0.0:8080:8080
+#  volumes:
+#    - /docker-data/tomcat8/webapps:/usr/local/tomcat/webapps
+#    - /docker-data/tomcat8/logs:/usr/local/tomcat/logs
+

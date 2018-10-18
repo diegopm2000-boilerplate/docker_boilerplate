@@ -1,0 +1,4 @@
+node-express-web:
+  image: diegopm2000/node-web-app
+  ports:
+    - 0.0.0.0:8080:8080

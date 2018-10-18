@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://simple.webservices.citd.isb.com">
+    <xs:simpleType name="PROCEDENCIA_DEL_FONDO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="3"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NUMERO_DE_PERSONA_Type">
+          <xs:restriction base="xs:integer">
+               <xs:minInclusive value="-999999999"/>
+               <xs:maxInclusive value="+999999999"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="TIP_INSTRUCCION_ORDEN_PE_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){3}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_MENSAJE_APP_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="40"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="EMPRESA_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="4"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NOMBRE_DE_PERSONA_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="250"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="EMPRESA_DEL_CENTRO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="4"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="ORDEN_Type">
+          <xs:restriction base="xs:integer">
+               <xs:minInclusive value="-999"/>
+               <xs:maxInclusive value="+999"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NUMERO_IMPORTE_Type">
+          <xs:restriction base="xs:decimal">
+               <xs:minInclusive value="-99999999999999999.99"/>
+               <xs:maxInclusive value="+99999999999999999.99"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CONTR_LOCAL_LOCALIZACION_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="40"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="GASTOS_POR_CUENTA_DE_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z]|[ ]|[Ñ]|[ñ]){1}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="FORMATO_DOMICILIO_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){2}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NUMERO_OPERACION_DGO_Type">
+          <xs:restriction base="xs:integer">
+               <xs:minInclusive value="-99999999"/>
+               <xs:maxInclusive value="+99999999"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NOMBRE_MEDIO_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="30"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="DESCRIPCION_EXTRALARGA_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="4000"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="DIVISA_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="3"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NOMBRE_LARGO_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="50"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="TIP_ENVIO_CORRESPONDENCIA_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){1}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_DE_PRODUCTO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="3"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_DE_SUBAPLICACION_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="8"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="BIC_ISO_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="11"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="DESCRIPCION_BREVE_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="50"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="ABBEY_BOOLEAN_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([T|t][R|r][U|u][E|e])|([F|f][A|a][L|l][S|s][E|e]){0,5}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_DOCUMENTO_OFICIAL_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="9"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="PAIS_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="2"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NOMBRE_CORTO_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="10"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="FECHA_GENERICA_Type">
+          <xs:restriction base="xs:date"/>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_ISIN_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[Ñ]|[ñ]){12}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="STRING_60_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="60"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NUMERO_DE_ORDEN_SERVICIO_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){7}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_DE_CANAL_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="3"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_ALFANUM_2_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){2}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="ABBEY_SHORT_Type">
+          <xs:restriction base="xs:integer">
+               <xs:minInclusive value="-99999"/>
+               <xs:maxInclusive value="+99999"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="STRING_35_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="35"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="ABBEY_STRING_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="60000"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="TEXTO_MULTILINEA_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="8200"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="TIPO_CONTRATO_LOCAL_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){2}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CANTIDAD_Type">
+          <xs:restriction base="xs:integer">
+               <xs:minInclusive value="-9999999"/>
+               <xs:maxInclusive value="+9999999"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="INDICADOR_SI-NO_Type">
+          <xs:restriction base="xs:string">
+               <xs:enumeration value="S"/>
+               <xs:enumeration value="N"/>
+               <xs:enumeration value="s"/>
+               <xs:enumeration value="n"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="DESCRIPCION_GENERAL_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="500"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_TERMINAL_DGO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="5"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_ALFANUM_6_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="6"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_ALFANUM_8_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="8"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="INDICADOR_GENERICO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="1"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="TIPO_DOC_IDENTIFICACION_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z]|[ ]|[Ñ]|[ñ]){1}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="TIPO_DE_PERSONA_Type">
+          <xs:restriction base="xs:string">
+               <xs:enumeration value="F"/>
+               <xs:enumeration value="J"/>
+               <xs:enumeration value="G"/>
+               <xs:enumeration value="f"/>
+               <xs:enumeration value="j"/>
+               <xs:enumeration value="g"/>
+               <xs:enumeration value=" "/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CONCEPTO_DE_LIQUIDACION_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){3}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="DESCRIPCION_LARGA_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="999"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_ERROR_APP_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="40"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_DE_RETORNO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="2"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CUENTA_GENERAL_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="34"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="DOMICILIO_TRANSITO_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="280"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="CODIGO_CENTRO_Type">
+          <xs:restriction base="xs:string">
+               <xs:length value="4"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="NUMERO_CUENTA_INTERNO_Type">
+          <xs:restriction base="xs:string">
+               <xs:pattern value="([a-zA-Z0-9]|[ ]|[Ñ]|[ñ]|[\?]){7}"/>
+          </xs:restriction>
+     </xs:simpleType>
+    <xs:simpleType name="STRING_3_Type">
+          <xs:restriction base="xs:string">
+               <xs:minLength value="0"/>
+               <xs:maxLength value="3"/>
+          </xs:restriction>
+     </xs:simpleType>
+</xs:schema>

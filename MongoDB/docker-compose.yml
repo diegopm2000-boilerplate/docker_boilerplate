@@ -1,0 +1,6 @@
+mongo:
+  image: mongo
+  ports:
+    - 0.0.0.0:27017:27017
+#  volumes:
+#    - /volumes/mongodb/db:/data/db
