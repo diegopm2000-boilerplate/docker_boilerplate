@@ -1,0 +1,133 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MovieCollection",
+		"_postman_id": "8f47e33a-e7f8-300c-9854-195c542350db",
+		"description": "Colección de métodos para probar el Api Movie Collection que se ha desarrollado usando el swagger editor y desplegado usando swagger express en un node dockerizado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get movies",
+			"request": {
+				"url": "localhost:8080/movie",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get movie by Id",
+			"request": {
+				"url": "localhost:8080/movie/{id}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Obtener una película pasando el id en la uri"
+			},
+			"response": []
+		},
+		{
+			"name": "Introducir Star Wars Episode IV",
+			"request": {
+				"url": "localhost:8080/movie",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Star Wars Episode IV: A new hope\",\n \"year\":1977\n}"
+				},
+				"description": "Dar de alta la película Star Wars Episode IV"
+			},
+			"response": []
+		},
+		{
+			"name": "Introducir  Star Wars Episode V",
+			"request": {
+				"url": "localhost:8080/movie",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Star Wars Episode V: Empire Strikes Back\",\n \"year\":1980\n}"
+				},
+				"description": "Dar de alta la película Star Wars Episode V"
+			},
+			"response": []
+		},
+		{
+			"name": "Introducir  Star Wars Episode VI",
+			"request": {
+				"url": "localhost:8080/movie",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Star Wars Episode VI: Return of the Jedi\",\n \"year\":1983\n}"
+				},
+				"description": "Dar de alta la película Star Wars Episode VI"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar película",
+			"request": {
+				"url": "localhost:8080/movie/4df19cf4bc488cbddbdf88e96ce10f4e7909c764",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Star Wars Episodio IV: Una nueva esperanza\",\n \"year\":1977\n}"
+				},
+				"description": "Actualizamos la película pasando por la uri el ID de la película y en el body el título y el año."
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar una película",
+			"request": {
+				"url": "localhost:8080/movie/31d7e21b55635288937c066c7e185263437e63e8",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Star Wars Episodio IV: Una nueva esperanza\",\n \"year\":1977\n}"
+				},
+				"description": "Borramos una película pasando el ID"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,8 @@
+soap-ui:
+  image: fbascheper/soapui-mockservice-runner
+  ports:
+    - "8080:8080"
+  environment:
+    - MOCK_SERVICE_NAME=BLZ-SOAP11-MockService
+    - MOCK_SERVICE_PATH=/BLZMockService
+    - PROJECT=/home/soapui/soapui-prj/default-soapui-project.xml

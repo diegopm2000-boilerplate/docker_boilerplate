@@ -1,0 +1,8 @@
+soap-ui:
+  image: diegopm2000/soap-ui
+  ports:
+    - "0.0.0.0:8080:8080"
+  environment:
+    - MOCK_SERVICE_NAME=AbbeyMockService
+    - MOCK_SERVICE_PATH=/mockESHHMPWSSoapBindingHTTP
+    - PROJECT=/home/soapui/soapui-prj/AbbeySoap-soapui-project.xml

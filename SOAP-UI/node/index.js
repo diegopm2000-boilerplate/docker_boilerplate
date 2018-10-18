@@ -1,0 +1,180 @@
+var soap = require('soap');
+var url = 'http://localhost:8080/mockESHHMPWSSoapBindingHTTP/wsdl?wsdl';
+//var url = 'https://brickset.com/api/v2.asmx?WSDL';
+
+var args = {};
+var options = {envelopeKey: `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:new="http://new.webservice.namespace">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <new:emisOrdenEmitidaFX facade="ESHHMPWS">
+         <entrada>
+            <cuentaCargo>
+               <contratoLocal>
+                  <TIPO_CONTRATO_LOCAL>1</TIPO_CONTRATO_LOCAL>
+                  <DETALLE_CONTRATO_LOCAL>2</DETALLE_CONTRATO_LOCAL>
+               </contratoLocal>
+               <contratoPartenon>
+                  <CENTRO>
+                     <EMPRESA>3</EMPRESA>
+                     <CENTRO>4</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>5</PRODUCTO>
+                  <NUMERO_DE_CONTRATO>6</NUMERO_DE_CONTRATO>
+               </contratoPartenon>
+            </cuentaCargo>
+            <cuentaGastos>
+               <contratoLocal>
+                  <TIPO_CONTRATO_LOCAL>7</TIPO_CONTRATO_LOCAL>
+                  <DETALLE_CONTRATO_LOCAL>8</DETALLE_CONTRATO_LOCAL>
+               </contratoLocal>
+               <contratoPartenon>
+                  <CENTRO>
+                     <EMPRESA>9</EMPRESA>
+                     <CENTRO>10</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>11</PRODUCTO>
+                  <NUMERO_DE_CONTRATO>12</NUMERO_DE_CONTRATO>
+               </contratoPartenon>
+            </cuentaGastos>
+            <bancoCorresponsal>
+               <EMPRESA>13</EMPRESA>
+               <CENTRO>14</CENTRO>
+               <branch>15</branch>
+            </bancoCorresponsal>
+            <bancoBeneficiario>
+               <EMPRESA>16</EMPRESA>
+               <CENTRO>17</CENTRO>
+               <branch>18</branch>
+            </bancoBeneficiario>
+            <bancoCorresponsalRecep>
+               <EMPRESA>19</EMPRESA>
+               <CENTRO>20</CENTRO>
+               <branch>21</branch>
+            </bancoCorresponsalRecep>
+            <bancoBeneficiario07>
+               <EMPRESA>22</EMPRESA>
+               <CENTRO>23</CENTRO>
+               <branch>24</branch>
+            </bancoBeneficiario07>
+            <bancoIntermediario>
+               <EMPRESA>25</EMPRESA>
+               <CENTRO>26</CENTRO>
+               <branch>27</branch>
+            </bancoIntermediario>
+            <bancoReceptor>
+               <EMPRESA>28</EMPRESA>
+               <CENTRO>29</CENTRO>
+               <branch>30</branch>
+            </bancoReceptor>
+            <codCanal>31</codCanal>
+            <descDirBeneficiario>32</descDirBeneficiario>
+            <nombreBeneficiario>33</nombreBeneficiario>
+            <descPlaza>34</descPlaza>
+            <ctaBeneficiario>35</ctaBeneficiario>
+            <descDetalleGasto2>36</descDetalleGasto2>
+            <descDetalleGasto1>37</descDetalleGasto1>
+            <descDetalleGasto4>38</descDetalleGasto4>
+            <descDetalleGasto7>39</descDetalleGasto7>
+            <impOperacion>
+               <IMPORTE>40</IMPORTE>
+               <DIVISA>41</DIVISA>
+            </impOperacion>
+            <impCargo>
+               <IMPORTE>42</IMPORTE>
+               <DIVISA>43</DIVISA>
+            </impCargo>
+            <indUrgencia>44</indUrgencia>
+            <descInfoBanco11>45</descInfoBanco11>
+            <descInfoBanco13>46</descInfoBanco13>
+            <descInfoBanco21>47</descInfoBanco21>
+            <descInfoBanco22>48</descInfoBanco22>
+            <descInfoBanco31>49</descInfoBanco31>
+            <descInfoBanco32>50</descInfoBanco32>
+            <descInfoBanco41>51</descInfoBanco41>
+            <descInfoBanco42>52</descInfoBanco42>
+            <descInfoBanco51>53</descInfoBanco51>
+            <descInfoBanco52>54</descInfoBanco52>
+            <descInfoBanco61>55</descInfoBanco61>
+            <descInfoBanco62>56</descInfoBanco62>
+            <paisDestino>57</paisDestino>
+            <indTipoComisiones>58</indTipoComisiones>
+            <persona>
+               <TIPO_DE_PERSONA>59</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>60</CODIGO_DE_PERSONA>
+            </persona>
+            <fechaOperacion>61</fechaOperacion>
+            <fechaValor>62</fechaValor>
+            <ordenOrigen>
+               <ORDEN_DE_SERVICIO>
+                  <CENTRO>
+                     <EMPRESA>63</EMPRESA>
+                     <CENTRO>64</CENTRO>
+                  </CENTRO>
+                  <PRODUCTO>65</PRODUCTO>
+                  <NUMERO_DE_ORDEN>66</NUMERO_DE_ORDEN>
+               </ORDEN_DE_SERVICIO>
+               <INTRUCCION_ORDEN_PE>67</INTRUCCION_ORDEN_PE>
+               <ORDEN>68</ORDEN>
+            </ordenOrigen>
+            <centroAuxContable>
+               <EMPRESA>69</EMPRESA>
+               <CENTRO>70</CENTRO>
+            </centroAuxContable>
+            <codAplicacion>71</codAplicacion>
+            <codTiboB7>72</codTiboB7>
+            <indGenEstadoEntrada>73</indGenEstadoEntrada>
+            <indGenResibenEntradaPic>74</indGenResibenEntradaPic>
+            <opDGO>
+               <CENTRO>
+                  <EMPRESA>75</EMPRESA>
+                  <CENTRO>76</CENTRO>
+               </CENTRO>
+               <CODIGO_TERMINAL_DGO>77</CODIGO_TERMINAL_DGO>
+               <NUMERO_DGO>78</NUMERO_DGO>
+            </opDGO>
+            <codSubaplic>79</codSubaplic>
+            <indIndrean>80</indIndrean>
+            <subTipCo>81</subTipCo>
+            <indPeticion>82</indPeticion>
+            <paisBeneficiario>83</paisBeneficiario>
+            <bancoOrdenante>
+               <EMPRESA>84</EMPRESA>
+               <CENTRO>85</CENTRO>
+               <branch>86</branch>
+            </bancoOrdenante>
+         </entrada>
+         <entradaSeg>
+            <contrato>
+               <CENTRO>
+                  <EMPRESA>87</EMPRESA>
+                  <CENTRO>88</CENTRO>
+               </CENTRO>
+               <PRODUCTO>89</PRODUCTO>
+               <NUMERO_DE_CONTRATO>90</NUMERO_DE_CONTRATO>
+            </contrato>
+            <cliente>
+               <TIPO_DE_PERSONA>91</TIPO_DE_PERSONA>
+               <CODIGO_DE_PERSONA>92</CODIGO_DE_PERSONA>
+            </cliente>
+            <canal>93</canal>
+         </entradaSeg>
+         <perfil>
+            <empresa>94</empresa>
+            <canal>95</canal>
+         </perfil>
+      </new:altaOrdenFinanciadaOA>
+   </soapenv:Body>
+</soapenv:Envelope>`};
+
+//console.log(options.envelopeKey);
+
+soap.createClient(url, function(err, client) {
+
+  client.emisOrdenEmitidaFX(args, options, function(err, result) {
+
+        console.log("ERR:"+err);
+        console.log("RESULT:"+JSON.stringify(result));
+        console.log("FechaValor:"+result.methodResult.fechaValor);
+  });
+
+});

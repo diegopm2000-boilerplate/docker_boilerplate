@@ -1,0 +1,82 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AbbeySOAPUI",
+		"_postman_id": "df8bef40-d26f-4dd3-140c-a018858cf0bc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request Default",
+			"request": {
+				"url": "localhost:8080",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Alta Orden Financiada",
+			"request": {
+				"url": "http://localhost:8080/mockESHHMPWSSoapBindingHTTP",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:new=\"http://new.webservice.namespace\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <new:altaOrdenFinanciadaOA facade=\"ESHHMPWS\">\n         <entrada>\n            <cuentaCargo>\n               <contratoLocal>\n                  <TIPO_CONTRATO_LOCAL>1</TIPO_CONTRATO_LOCAL>\n                  <DETALLE_CONTRATO_LOCAL>2</DETALLE_CONTRATO_LOCAL>\n               </contratoLocal>\n               <contratoPartenon>\n                  <CENTRO>\n                     <EMPRESA>3</EMPRESA>\n                     <CENTRO>4</CENTRO>\n                  </CENTRO>\n                  <PRODUCTO>5</PRODUCTO>\n                  <NUMERO_DE_CONTRATO>6</NUMERO_DE_CONTRATO>\n               </contratoPartenon>\n            </cuentaCargo>\n            <cuentaGastos>\n               <contratoLocal>\n                  <TIPO_CONTRATO_LOCAL>7</TIPO_CONTRATO_LOCAL>\n                  <DETALLE_CONTRATO_LOCAL>8</DETALLE_CONTRATO_LOCAL>\n               </contratoLocal>\n               <contratoPartenon>\n                  <CENTRO>\n                     <EMPRESA>9</EMPRESA>\n                     <CENTRO>10</CENTRO>\n                  </CENTRO>\n                  <PRODUCTO>11</PRODUCTO>\n                  <NUMERO_DE_CONTRATO>12</NUMERO_DE_CONTRATO>\n               </contratoPartenon>\n            </cuentaGastos>\n            <bancoCorresponsal>\n               <EMPRESA>13</EMPRESA>\n               <CENTRO>14</CENTRO>\n               <branch>15</branch>\n            </bancoCorresponsal>\n            <bancoBeneficiario>\n               <EMPRESA>16</EMPRESA>\n               <CENTRO>17</CENTRO>\n               <branch>18</branch>\n            </bancoBeneficiario>\n            <bancoCorresponsalRecep>\n               <EMPRESA>19</EMPRESA>\n               <CENTRO>20</CENTRO>\n               <branch>21</branch>\n            </bancoCorresponsalRecep>\n            <bancoBeneficiario07>\n               <EMPRESA>22</EMPRESA>\n               <CENTRO>23</CENTRO>\n               <branch>24</branch>\n            </bancoBeneficiario07>\n            <bancoIntermediario>\n               <EMPRESA>25</EMPRESA>\n               <CENTRO>26</CENTRO>\n               <branch>27</branch>\n            </bancoIntermediario>\n            <bancoReceptor>\n               <EMPRESA>28</EMPRESA>\n               <CENTRO>29</CENTRO>\n               <branch>30</branch>\n            </bancoReceptor>\n            <codCanal>31</codCanal>\n            <descDirBeneficiario>32</descDirBeneficiario>\n            <nombreBeneficiario>33</nombreBeneficiario>\n            <descPlaza>34</descPlaza>\n            <ctaBeneficiario>35</ctaBeneficiario>\n            <descDetalleGasto2>36</descDetalleGasto2>\n            <descDetalleGasto1>37</descDetalleGasto1>\n            <descDetalleGasto4>38</descDetalleGasto4>\n            <descDetalleGasto7>39</descDetalleGasto7>\n            <impOperacion>\n               <IMPORTE>40</IMPORTE>\n               <DIVISA>41</DIVISA>\n            </impOperacion>\n            <impCargo>\n               <IMPORTE>42</IMPORTE>\n               <DIVISA>43</DIVISA>\n            </impCargo>\n            <indUrgencia>44</indUrgencia>\n            <descInfoBanco11>45</descInfoBanco11>\n            <descInfoBanco13>46</descInfoBanco13>\n            <descInfoBanco21>47</descInfoBanco21>\n            <descInfoBanco22>48</descInfoBanco22>\n            <descInfoBanco31>49</descInfoBanco31>\n            <descInfoBanco32>50</descInfoBanco32>\n            <descInfoBanco41>51</descInfoBanco41>\n            <descInfoBanco42>52</descInfoBanco42>\n            <descInfoBanco51>53</descInfoBanco51>\n            <descInfoBanco52>54</descInfoBanco52>\n            <descInfoBanco61>55</descInfoBanco61>\n            <descInfoBanco62>56</descInfoBanco62>\n            <paisDestino>57</paisDestino>\n            <indTipoComisiones>58</indTipoComisiones>\n            <persona>\n               <TIPO_DE_PERSONA>59</TIPO_DE_PERSONA>\n               <CODIGO_DE_PERSONA>60</CODIGO_DE_PERSONA>\n            </persona>\n            <fechaOperacion>61</fechaOperacion>\n            <fechaValor>62</fechaValor>\n            <ordenOrigen>\n               <ORDEN_DE_SERVICIO>\n                  <CENTRO>\n                     <EMPRESA>63</EMPRESA>\n                     <CENTRO>64</CENTRO>\n                  </CENTRO>\n                  <PRODUCTO>65</PRODUCTO>\n                  <NUMERO_DE_ORDEN>66</NUMERO_DE_ORDEN>\n               </ORDEN_DE_SERVICIO>\n               <INTRUCCION_ORDEN_PE>67</INTRUCCION_ORDEN_PE>\n               <ORDEN>68</ORDEN>\n            </ordenOrigen>\n            <centroAuxContable>\n               <EMPRESA>69</EMPRESA>\n               <CENTRO>70</CENTRO>\n            </centroAuxContable>\n            <codAplicacion>71</codAplicacion>\n            <codTiboB7>72</codTiboB7>\n            <indGenEstadoEntrada>73</indGenEstadoEntrada>\n            <indGenResibenEntradaPic>74</indGenResibenEntradaPic>\n            <opDGO>\n               <CENTRO>\n                  <EMPRESA>75</EMPRESA>\n                  <CENTRO>76</CENTRO>\n               </CENTRO>\n               <CODIGO_TERMINAL_DGO>77</CODIGO_TERMINAL_DGO>\n               <NUMERO_DGO>78</NUMERO_DGO>\n            </opDGO>\n            <codSubaplic>79</codSubaplic>\n            <indIndrean>80</indIndrean>\n            <subTipCo>81</subTipCo>\n            <indPeticion>82</indPeticion>\n            <paisBeneficiario>83</paisBeneficiario>\n            <bancoOrdenante>\n               <EMPRESA>84</EMPRESA>\n               <CENTRO>85</CENTRO>\n               <branch>86</branch>\n            </bancoOrdenante>\n         </entrada>\n         <entradaSeg>\n            <contrato>\n               <CENTRO>\n                  <EMPRESA>87</EMPRESA>\n                  <CENTRO>88</CENTRO>\n               </CENTRO>\n               <PRODUCTO>89</PRODUCTO>\n               <NUMERO_DE_CONTRATO>90</NUMERO_DE_CONTRATO>\n            </contrato>\n            <cliente>\n               <TIPO_DE_PERSONA>91</TIPO_DE_PERSONA>\n               <CODIGO_DE_PERSONA>92</CODIGO_DE_PERSONA>\n            </cliente>\n            <canal>93</canal>\n         </entradaSeg>\n         <perfil>\n            <empresa>94</empresa>\n            <canal>95</canal>\n         </perfil>\n      </new:altaOrdenFinanciadaOA>\n   </soapenv:Body>\n</soapenv:Envelope>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Emis Orden Emitida",
+			"request": {
+				"url": "http://localhost:8080/mockESHHMPWSSoapBindingHTTP",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:new=\"http://new.webservice.namespace\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <new:emisOrdenEmitidaFX facade=\"ESHHMPWS\">\n         <entrada>\n            <nombreBenef>1</nombreBenef>\n            <domicilioBenef>\n               <FORMATO_DOMICILIO>2</FORMATO_DOMICILIO>\n               <DETALLE_DOMICILIO>3</DETALLE_DOMICILIO>\n            </domicilioBenef>\n            <plazaBenef>4</plazaBenef>\n            <cuentaBenef>5</cuentaBenef>\n            <codPostal>6</codPostal>\n            <personaCliente>\n               <TIPO_DE_PERSONA>7</TIPO_DE_PERSONA>\n               <CODIGO_DE_PERSONA>8</CODIGO_DE_PERSONA>\n            </personaCliente>\n            <impOperac>\n               <IMPORTE>9</IMPORTE>\n               <DIVISA>10</DIVISA>\n            </impOperac>\n            <impCargo>\n               <IMPORTE>11</IMPORTE>\n               <DIVISA>12</DIVISA>\n            </impCargo>\n            <codPais>13</codPais>\n            <cuentaOrdenante>14</cuentaOrdenante>\n            <indPeticion>15</indPeticion>\n            <bancoBenefA>16</bancoBenefA>\n            <concepto>17</concepto>\n         </entrada>\n         <entradaSeg>\n            <contrato>\n               <CENTRO>\n                  <EMPRESA>18</EMPRESA>\n                  <CENTRO>19</CENTRO>\n               </CENTRO>\n               <PRODUCTO>20</PRODUCTO>\n               <NUMERO_DE_CONTRATO>21</NUMERO_DE_CONTRATO>\n            </contrato>\n            <cliente>\n               <TIPO_DE_PERSONA>22</TIPO_DE_PERSONA>\n               <CODIGO_DE_PERSONA>23</CODIGO_DE_PERSONA>\n            </cliente>\n            <canal>24</canal>\n         </entradaSeg>\n      </new:emisOrdenEmitidaFX>\n   </soapenv:Body>\n</soapenv:Envelope>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Val Emis Perio",
+			"request": {
+				"url": "http://localhost:8080/mockESHHMPWSSoapBindingHTTP",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:new=\"http://new.webservice.namespace\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <new:valEmisPerio_19523 facade=\"ESHHMPWS\">\n         <entrada>\n            <cuentaNominal>\n               <contratoLocal>\n                  <TIPO_CONTRATO_LOCAL>1</TIPO_CONTRATO_LOCAL>\n                  <DETALLE_CONTRATO_LOCAL>2</DETALLE_CONTRATO_LOCAL>\n               </contratoLocal>\n               <contratoPartenon>\n                  <CENTRO>\n                     <EMPRESA>3</EMPRESA>\n                     <CENTRO>4</CENTRO>\n                  </CENTRO>\n                  <PRODUCTO>5</PRODUCTO>\n                  <NUMERO_DE_CONTRATO>6</NUMERO_DE_CONTRATO>\n               </contratoPartenon>\n            </cuentaNominal>\n            <cuentaGastos>\n               <contratoLocal>\n                  <TIPO_CONTRATO_LOCAL>7</TIPO_CONTRATO_LOCAL>\n                  <DETALLE_CONTRATO_LOCAL>8</DETALLE_CONTRATO_LOCAL>\n               </contratoLocal>\n               <contratoPartenon>\n                  <CENTRO>\n                     <EMPRESA>9</EMPRESA>\n                     <CENTRO>10</CENTRO>\n                  </CENTRO>\n                  <PRODUCTO>11</PRODUCTO>\n                  <NUMERO_DE_CONTRATO>12</NUMERO_DE_CONTRATO>\n               </contratoPartenon>\n            </cuentaGastos>\n            <nombreBenef>13</nombreBenef>\n            <domicilioBenef>\n               <FORMATO_DOMICILIO>14</FORMATO_DOMICILIO>\n               <DETALLE_DOMICILIO>15</DETALLE_DOMICILIO>\n            </domicilioBenef>\n            <plazaBenef>16</plazaBenef>\n            <descriPaiBenef>17</descriPaiBenef>\n            <cuentaBenef>18</cuentaBenef>\n            <indResiBenef>19</indResiBenef>\n            <bancoBenefA>20</bancoBenefA>\n            <domBanBen>\n               <FORMATO_DOMICILIO>21</FORMATO_DOMICILIO>\n               <DETALLE_DOMICILIO>22</DETALLE_DOMICILIO>\n            </domBanBen>\n            <plaBanBen>23</plaBanBen>\n            <descPaiBanBen>24</descPaiBanBen>\n            <fechaValor>25</fechaValor>\n            <seguroCambio>\n               <CENTRO>\n                  <EMPRESA>26</EMPRESA>\n                  <CENTRO>27</CENTRO>\n               </CENTRO>\n               <PRODUCTO>28</PRODUCTO>\n               <NUMERO_DE_ORDEN>29</NUMERO_DE_ORDEN>\n            </seguroCambio>\n            <impSegCambio>\n               <IMPORTE>30</IMPORTE>\n               <DIVISA>31</DIVISA>\n            </impSegCambio>\n            <paisDestino>32</paisDestino>\n            <personaCliente>\n               <TIPO_DE_PERSONA>33</TIPO_DE_PERSONA>\n               <CODIGO_DE_PERSONA>34</CODIGO_DE_PERSONA>\n            </personaCliente>\n            <impOperac>\n               <IMPORTE>35</IMPORTE>\n               <DIVISA>36</DIVISA>\n            </impOperac>\n            <impCargo>\n               <IMPORTE>37</IMPORTE>\n               <DIVISA>38</DIVISA>\n            </impCargo>\n            <indUrgen>39</indUrgen>\n            <indDesglose>40</indDesglose>\n            <indCarta>41</indCarta>\n            <indGastos>42</indGastos>\n            <detPag1>43</detPag1>\n            <detPag2>44</detPag2>\n            <detPag3>45</detPag3>\n            <detPag4>46</detPag4>\n            <claveInfBan1>47</claveInfBan1>\n            <detInfBan1>48</detInfBan1>\n            <claveInfBan2>49</claveInfBan2>\n            <detInfBan2>50</detInfBan2>\n            <claveInfBan3>51</claveInfBan3>\n            <detInfBan3>52</detInfBan3>\n            <claveInfBan4>53</claveInfBan4>\n            <detInfBan4>54</detInfBan4>\n            <claveInfBan5>55</claveInfBan5>\n            <detInfBan5>56</detInfBan5>\n            <claveInfBan6>57</claveInfBan6>\n            <detInfBan6>58</detInfBan6>\n            <referencia>59</referencia>\n            <descPartAranc>60</descPartAranc>\n            <impJust>\n               <IMPORTE>61</IMPORTE>\n               <DIVISA>62</DIVISA>\n            </impJust>\n            <clavComunicBE>63</clavComunicBE>\n            <numOF>64</numOF>\n            <nifEmisor>\n               <TIPO_DOCUMENTO_OFIC>65</TIPO_DOCUMENTO_OFIC>\n               <CODIGO_DE_DOCUMENTO>66</CODIGO_DE_DOCUMENTO>\n            </nifEmisor>\n            <codIsin>67</codIsin>\n            <codDocum>\n               <TIPO_DOCUMENTO_OFIC>68</TIPO_DOCUMENTO_OFIC>\n               <CODIGO_DE_DOCUMENTO>69</CODIGO_DE_DOCUMENTO>\n            </codDocum>\n            <codPaisR>70</codPaisR>\n            <perfil>\n               <empresa>71</empresa>\n               <canal>72</canal>\n            </perfil>\n            <nomBanBen>73</nomBanBen>\n         </entrada>\n         <entradaSeg>\n            <contrato>\n               <CENTRO>\n                  <EMPRESA>74</EMPRESA>\n                  <CENTRO>75</CENTRO>\n               </CENTRO>\n               <PRODUCTO>76</PRODUCTO>\n               <NUMERO_DE_CONTRATO>77</NUMERO_DE_CONTRATO>\n            </contrato>\n            <cliente>\n               <TIPO_DE_PERSONA>77</TIPO_DE_PERSONA>\n               <CODIGO_DE_PERSONA>78</CODIGO_DE_PERSONA>\n            </cliente>\n            <canal>79</canal>\n         </entradaSeg>\n      </new:valEmisPerio_19523>\n   </soapenv:Body>\n</soapenv:Envelope>"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"variables": [],
+	"info": {
+		"name": "DefaultSOAPUI",
+		"_postman_id": "8b0cab17-b536-1f8e-1711-eae24bdd5a20",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Request Default",
+			"request": {
+				"url": "localhost:8080",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Hacemos request contra el servidor de SOAP UI "
+			},
+			"response": []
+		},
+		{
+			"name": "getBank",
+			"request": {
+				"url": "localhost:8080/BLZMockService/getBank",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:blz=\"http://thomas-bayer.com/blz/\">\n   <soap:Header/>\n   <soap:Body>\n      <blz:getBank>\n         <blz:blz>60030700</blz:blz>\n      </blz:getBank>\n   </soap:Body>\n</soap:Envelope>\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

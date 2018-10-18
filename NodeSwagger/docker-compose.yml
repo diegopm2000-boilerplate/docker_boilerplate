@@ -1,0 +1,6 @@
+node-express-web:
+  image: diegopm2000/swaggermoviecollection
+  ports:
+    - 0.0.0.0:8080:3000
+#  environment:
+#    - PORT=80

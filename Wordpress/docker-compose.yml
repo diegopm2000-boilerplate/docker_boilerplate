@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 8090:80
+    environment:
+      WORDPRESS_DB_PASSWORD: example
+    volumes:
+      - /docker-data/wordpress/wordpress/var/www/html:/var/www/html
+      - /docker-data/wordpress/wordpress/usr/local/etc/php/conf.d/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+  mysql:
+    image: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - /docker-data/wordpress/mysql/var/lib/mysql:/var/lib/mysql

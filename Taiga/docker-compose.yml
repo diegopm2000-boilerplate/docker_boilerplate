@@ -1,0 +1,39 @@
+version: "3"
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: taiga
+      POSTGRES_PASSWORD: password
+    volumes:
+      - /docker-data/taiga/postgresql/data:/var/lib/postgresql/data
+  taigaback:
+    image: htdvisser/taiga-back:stable
+    hostname: dev.example.com
+    environment:
+      - POSTGRES_DB_NAME=taiga
+      - POSTGRES_USER=taiga
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
+      - SECRET_KEY=examplesecretkey
+      - EMAIL_USE_TLS=True
+      - EMAIL_HOST=smtp.mailtrap.io
+      - EMAIL_PORT=2525
+      - EMAIL_HOST_USER=f0d76bf267da67
+      - EMAIL_HOST_PASSWORD=f08f37bbb34669
+    links:
+      - db:postgres
+    volumes:
+      - /docker-data/taiga/taiga/media:/usr/local/taiga/media
+      - /docker-data/taiga/taiga/static:/usr/local/taiga/static
+      - /docker-data/taiga/taiga/logs:/usr/local/taiga/logs
+  taigafront:
+    image: htdvisser/taiga-front-dist:stable
+    hostname: dev.example.com
+    links:
+      - taigaback
+    ports:
+      - 8056:80
+    environment:
+      - TAIGABACK_PORT_8000_TCP_ADDR=taigaback

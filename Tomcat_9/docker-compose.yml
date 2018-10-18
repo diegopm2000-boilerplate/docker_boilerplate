@@ -1,0 +1,8 @@
+tomcat9:
+  image: diegopm2000/tomcat9
+  ports:
+    - 0.0.0.0:8080:8080
+#  volumes:
+#    - /docker-data/tomcat9/webapps:/usr/local/tomcat/webapps
+#    - /docker-data/tomcat9/logs:/usr/local/tomcat/logs
+

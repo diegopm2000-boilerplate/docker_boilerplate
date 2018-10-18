@@ -1,0 +1,6 @@
+ghost:
+  image: ghost
+  ports:
+    - 0.0.0.0:8091:2368
+#  volumes:
+#    - ./volumes/ghost:/var/lib/ghost

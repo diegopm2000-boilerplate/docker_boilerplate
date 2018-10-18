@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:TDCs="http://simple.webservices.citd.isb.com" xmlns:tns="http://faultExceptions.webservices.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://faultExceptions.webservices.isb.com">
+    <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./ws_TDCs.xsd"/>
+    <xs:element name="com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codigo" type="TDCs:CODIGO_ERROR_APP_Type"/>
+                <xs:element name="descError" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="kcExcepcion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="codigo" type="TDCs:CODIGO_ERROR_APP_Type"/>
+                            <xs:element name="descripcion" type="TDCs:DESCRIPCION_EXTRALARGA_Type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codError" type="TDCs:CODIGO_ERROR_APP_Type"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

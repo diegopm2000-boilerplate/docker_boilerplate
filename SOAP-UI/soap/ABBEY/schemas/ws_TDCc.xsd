@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:TDC_Simple="http://simple.webservices.citd.isb.com" xmlns:tns="http://composite.webservices.citd.isb.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://composite.webservices.citd.isb.com">
+    <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./ws_TDCs.xsd"/>
+    <xs:complexType name="CENTRO_DE_CONTRATO_Type">
+          <xs:sequence>
+               <xs:element name="EMPRESA" type="TDC_Simple:EMPRESA_DEL_CENTRO_Type"/>
+               <xs:element name="CENTRO" type="TDC_Simple:CODIGO_CENTRO_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="CENTRO_Type">
+          <xs:sequence>
+               <xs:element name="EMPRESA" type="TDC_Simple:EMPRESA_Type"/>
+               <xs:element name="CENTRO" type="TDC_Simple:CODIGO_CENTRO_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="OPERACION_DGO_Type">
+          <xs:sequence>
+               <xs:element name="CENTRO" type="tns:CENTRO_DE_CONTRATO_Type"/>
+               <xs:element name="CODIGO_TERMINAL_DGO" type="TDC_Simple:CODIGO_TERMINAL_DGO_Type"/>
+               <xs:element name="NUMERO_DGO" type="TDC_Simple:NUMERO_OPERACION_DGO_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="IMPORTE_Type">
+          <xs:sequence>
+               <xs:element name="IMPORTE" type="TDC_Simple:NUMERO_IMPORTE_Type"/>
+               <xs:element name="DIVISA" type="TDC_Simple:DIVISA_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="ORDEN_DE_SERVICIO_Type">
+          <xs:sequence>
+               <xs:element name="CENTRO" type="tns:CENTRO_Type"/>
+               <xs:element name="PRODUCTO" type="TDC_Simple:CODIGO_DE_PRODUCTO_Type"/>
+               <xs:element name="NUMERO_DE_ORDEN" type="TDC_Simple:NUMERO_DE_ORDEN_SERVICIO_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="CONTRATO_Type">
+          <xs:sequence>
+               <xs:element name="CENTRO" type="tns:CENTRO_DE_CONTRATO_Type"/>
+               <xs:element name="PRODUCTO" type="TDC_Simple:CODIGO_DE_PRODUCTO_Type"/>
+               <xs:element name="NUMERO_DE_CONTRATO" type="TDC_Simple:NUMERO_CUENTA_INTERNO_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="CONTRATO_LOCAL_Type">
+          <xs:sequence>
+               <xs:element name="TIPO_CONTRATO_LOCAL" type="TDC_Simple:TIPO_CONTRATO_LOCAL_Type"/>
+               <xs:element name="DETALLE_CONTRATO_LOCAL" type="TDC_Simple:CONTR_LOCAL_LOCALIZACION_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="NUM_PERSONA_CLIENTE_Type">
+          <xs:sequence>
+               <xs:element name="TIPO_DE_PERSONA" type="TDC_Simple:TIPO_DE_PERSONA_Type"/>
+               <xs:element name="CODIGO_DE_PERSONA" type="TDC_Simple:NUMERO_DE_PERSONA_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="IDENT_OFICIAL_PERSONA_Type">
+          <xs:sequence>
+               <xs:element name="TIPO_DOCUMENTO_OFIC" type="TDC_Simple:TIPO_DOC_IDENTIFICACION_Type"/>
+               <xs:element name="CODIGO_DE_DOCUMENTO" type="TDC_Simple:CODIGO_DOCUMENTO_OFICIAL_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="DOMICILIO_CORPORATIVO_Type">
+          <xs:sequence>
+               <xs:element name="FORMATO_DOMICILIO" type="TDC_Simple:FORMATO_DOMICILIO_Type"/>
+               <xs:element name="DETALLE_DOMICILIO" type="TDC_Simple:DOMICILIO_TRANSITO_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+    <xs:complexType name="INSTRUCCION_SERVICIO_PE_Type">
+          <xs:sequence>
+               <xs:element name="ORDEN_DE_SERVICIO" type="tns:ORDEN_DE_SERVICIO_Type"/>
+               <xs:element name="INTRUCCION_ORDEN_PE" type="TDC_Simple:TIP_INSTRUCCION_ORDEN_PE_Type"/>
+               <xs:element name="ORDEN" type="TDC_Simple:ORDEN_Type"/>
+          </xs:sequence>
+     </xs:complexType>
+</xs:schema>

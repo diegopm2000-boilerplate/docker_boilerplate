@@ -1,0 +1,17 @@
+version: "2.0"
+
+services:
+
+  springcloudconfig:
+    restart: on-failure:5
+    build: springcloudconfigserver
+    image: registry.lvtc.gsnet.corp/blockchain/springcloudconfigserver
+    ports:
+      - "8888:8888"
+    environment:
+      # PRUEBA CONTRA UN REPOSITORIO BITBUCKET
+      #- SPRING_CLOUD_CONFIG_SERVER_GIT_URI=https://diegopm2000@bitbucket.org/diegopm2000/repoconfigtest.git
+      #- SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME=<<user>>
+      #- SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD=<<password>>
+      # PRUEBA USANDO ssh
+      - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=git@bitbucket.org:diegopm2000/repoconfigtest.git

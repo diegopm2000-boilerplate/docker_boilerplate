@@ -1,0 +1,4 @@
+holamundo-nginx:
+  image: diegopm2000/nginxholamundo
+  ports:
+    - 0.0.0.0:80:80

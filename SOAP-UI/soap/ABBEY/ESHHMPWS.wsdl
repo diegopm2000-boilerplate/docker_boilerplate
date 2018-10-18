@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:TDCs="http://simple.webservices.citd.isb.com" xmlns:cbtypes="http://cbtypes.webservices.isb.com" xmlns:faultExceptions="http://faultExceptions.webservices.isb.com" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://new.webservice.namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://new.webservice.namespace">
+    <documentation>Webservice del módulo ValEmis</documentation>
+    <types>
+        <xs:schema targetNamespace="http://new.webservice.namespace">
+            <xs:import namespace="http://faultExceptions.webservices.isb.com" schemaLocation="./schemas/faultExceptions.xsd"/>
+            <xs:import namespace="http://cbtypes.webservices.isb.com" schemaLocation="./schemas/cb_types.xsd"/>
+            <xs:import namespace="http://simple.webservices.citd.isb.com" schemaLocation="./schemas/ws_TDCs.xsd"/>
+            <xs:element name="altaOrdenFinanciadaOA">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="entrada" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_E_Type">
+                            <xs:annotation>
+                                <xs:documentation>entrada</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="entradaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+                            <xs:annotation>
+                                <xs:documentation>entrada seguridad</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="perfil" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_perfil_19523_Type">
+                            <xs:annotation>
+                                <xs:documentation>perfil</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute fixed="ESHHMPWS" name="facade" type="TDCs:DESCRIPCION_GENERAL_Type"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="altaOrdenFinanciadaOAResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="methodResult" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.AltaOrdenFinanciadaOA_CB_S_Type">
+                            <xs:annotation>
+                                <xs:documentation>salida</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="valEmisPerio_19523">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="entrada" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_E_Type">
+                            <xs:annotation>
+                                <xs:documentation>entrada</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="entradaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+                            <xs:annotation>
+                                <xs:documentation>entradaSeg</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute fixed="ESHHMPWS" name="facade" type="TDCs:DESCRIPCION_GENERAL_Type"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="valEmisPerio_19523Response">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="methodResult" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_valEmisPerio_19523_S_Type">
+                            <xs:annotation>
+                                <xs:documentation>salida</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="emisOrdenEmitidaFX">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="entrada" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_E_Type">
+                            <xs:annotation>
+                                <xs:documentation>entrada</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="entradaSeg" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.CB_DatosEntradaSeg_19523_Type">
+                            <xs:annotation>
+                                <xs:documentation>entrada Seguridad</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute fixed="ESHHMPWS" name="facade" type="TDCs:DESCRIPCION_GENERAL_Type"/>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="emisOrdenEmitidaFXResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="methodResult" type="cbtypes:com.isb.al.hhmipa.valemis.m.cb.EmisOrdenEmitidaFX_CB_S_Type"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </types>
+    <message name="altaOrdenFinanciadaOA_Input">
+        <part element="tns:altaOrdenFinanciadaOA" name="altaOrdenFinanciadaOA_InputPart"/>
+    </message>
+    <message name="altaOrdenFinanciadaOA_Output">
+        <part element="tns:altaOrdenFinanciadaOAResponse" name="altaOrdenFinanciadaOA_OutputPart"/>
+    </message>
+    <message name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+        <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C" name="com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_FaultPart"/>
+    </message>
+    <message name="valEmisPerio_19523_Input">
+        <part element="tns:valEmisPerio_19523" name="valEmisPerio_19523_InputPart"/>
+    </message>
+    <message name="valEmisPerio_19523_Output">
+        <part element="tns:valEmisPerio_19523Response" name="valEmisPerio_19523_OutputPart"/>
+    </message>
+    <message name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault">
+        <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523" name="com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_FaultPart"/>
+    </message>
+    <message name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault">
+        <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523" name="com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_FaultPart"/>
+    </message>
+    <message name="emisOrdenEmitidaFX_Input">
+        <part element="tns:emisOrdenEmitidaFX" name="emisOrdenEmitidaFX_InputPart"/>
+    </message>
+    <message name="emisOrdenEmitidaFX_Output">
+        <part element="tns:emisOrdenEmitidaFXResponse" name="emisOrdenEmitidaFX_OutputPart"/>
+    </message>
+    <message name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+        <part element="faultExceptions:com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C" name="com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_FaultPart"/>
+    </message>
+    <portType name="ESHHMPWSPortTypeHTTP">
+        <operation name="valEmisPerio_19523">
+            <documentation>valEmisPerio_19523</documentation>
+            <input message="tns:valEmisPerio_19523_Input" name="valEmisPerio_19523_Input"/>
+            <output message="tns:valEmisPerio_19523_Output" name="valEmisPerio_19523_Output"/>
+            <fault message="tns:valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault" name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault"/>
+            <fault message="tns:valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault" name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault"/>
+        </operation>
+        <operation name="emisOrdenEmitidaFX">
+            <documentation>Emision y validacion de una orden emitida para FX</documentation>
+            <input message="tns:emisOrdenEmitidaFX_Input" name="emisOrdenEmitidaFX_Input"/>
+            <output message="tns:emisOrdenEmitidaFX_Output" name="emisOrdenEmitidaFX_Output"/>
+            <fault message="tns:emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault"/>
+        </operation>
+        <operation name="altaOrdenFinanciadaOA">
+            <documentation>altaOrdenFinanciadaOA</documentation>
+            <input message="tns:altaOrdenFinanciadaOA_Input" name="altaOrdenFinanciadaOA_Input"/>
+            <output message="tns:altaOrdenFinanciadaOA_Output" name="altaOrdenFinanciadaOA_Output"/>
+            <fault message="tns:altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault"/>
+        </operation>
+    </portType>
+    <binding name="ESHHMPWSSoapBindingHTTP" type="tns:ESHHMPWSPortTypeHTTP">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="valEmisPerio_19523">
+            <soap:operation soapAction="http://new.webservice.namespace/valEmisPerio_19523" style="document"/>
+            <input name="valEmisPerio_19523_Input">
+                <soap:body use="literal"/>
+            </input>
+            <output name="valEmisPerio_19523_Output">
+                <soap:body use="literal"/>
+            </output>
+            <fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault">
+                <soap:fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_Funcional_19523_Fault" use="literal"/>
+            </fault>
+            <fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault">
+                <soap:fault name="valEmisPerio_19523_com.isb.al.hhmipa.valemis.m.ef.EX_FuncionalTec_19523_Fault" use="literal"/>
+            </fault>
+        </operation>
+        <operation name="emisOrdenEmitidaFX">
+            <soap:operation soapAction="http://new.webservice.namespace/emisOrdenEmitidaFX" style="document"/>
+            <input name="emisOrdenEmitidaFX_Input">
+                <soap:body use="literal"/>
+            </input>
+            <output name="emisOrdenEmitidaFX_Output">
+                <soap:body use="literal"/>
+            </output>
+            <fault name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+                <soap:fault name="emisOrdenEmitidaFX_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" use="literal"/>
+            </fault>
+        </operation>
+        <operation name="altaOrdenFinanciadaOA">
+            <soap:operation soapAction="http://new.webservice.namespace/altaOrdenFinanciadaOA" style="document"/>
+            <input name="altaOrdenFinanciadaOA_Input">
+                <soap:body use="literal"/>
+            </input>
+            <output name="altaOrdenFinanciadaOA_Output">
+                <soap:body use="literal"/>
+            </output>
+            <fault name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault">
+                <soap:fault name="altaOrdenFinanciadaOA_com.isb.al.hhmipa.valemis.m.ef.General_HHMIPA_ValEmis_C_Fault" use="literal"/>
+            </fault>
+        </operation>
+    </binding>
+    <service name="ESHHMPWS_Service">
+        <port binding="tns:ESHHMPWSSoapBindingHTTP" name="ESHHMPWSPortHTTP">
+            <soap:address location="http://180.102.41.196:8080/ESHHMP_INT_ESCE/ws/ESHHMP_Def_Listener"/>
+        </port>
+    </service>
+</definitions>
