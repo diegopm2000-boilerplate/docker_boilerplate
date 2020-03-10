@@ -1,7 +1,13 @@
-jenkins:
-  image: jenkins
-  ports:
-    - 0.0.0.0:8080:8080
-    - 0.0.0.0:50000:50000
-  # volumes:
-  #  - ./volumes/jenkins:/var/jenkins_home
+version: '3.5'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins_info:/var/jenkins_home
+
+volumes:
+  jenkins_info:
