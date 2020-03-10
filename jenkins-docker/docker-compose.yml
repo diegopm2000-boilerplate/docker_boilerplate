@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  jenkins:
+    build: ./build
+    image: jenkins-docker:latest
+    container_name: jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins_info:/var/jenkins_home
+
+volumes:
+  jenkins_info:
