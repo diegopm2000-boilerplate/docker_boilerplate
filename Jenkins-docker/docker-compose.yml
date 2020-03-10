@@ -1,7 +1,8 @@
 version: '3.5'
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    build: ./build
+    image: jenkins-docker:latest
     container_name: jenkins
     ports:
       - 8080:8080
