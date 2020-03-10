@@ -1,24 +1,3 @@
-# Docker registry with frontend securized with username and password
-#
-# Execute this before start the containers to generate the user/password entry:
-# docker run --rm --entrypoint htpasswd registry:2 -Bbn <username> "<password>" > ~/htpasswd_backup/htpasswd
-# example:
-#
-# docker run --rm --entrypoint htpasswd registry:2 -Bbn diego "alfa1beta2" > ~/htpasswd_backup/htpasswd
-#
-# For pushing images:
-# 
-# docker login -u <<username>> localhost:5000
-# Password: <<type your password>>
-#
-# docker tag <<myimage>> localhost:5000/<<myimage>>
-# docker push localhost:5000/<<myimage>>
-#
-# For identify your images, use your user
-#
-# docker tag <<myimage>> localhost:5000/<<username>>/<<myimage>>
-# docker push localhost:5000/<<username>>/<<myimage>>
-
 version: '3.5'
 services:
   minio-s3:
@@ -28,9 +7,9 @@ services:
     environment:
       MINIO_ACCESS_KEY: minio
       MINIO_SECRET_KEY: minio123
-    command: server /export
+    command: server /data
     volumes:
-      - ./volumes/minio/export:/export
+      - minio_storage:/data
     networks:
       - registry_network
   registry:
@@ -62,6 +41,11 @@ services:
     networks:
       - registry_network
 
+volumes:
+  minio_storage:
+
 networks:
   registry_network:
+
+
     
