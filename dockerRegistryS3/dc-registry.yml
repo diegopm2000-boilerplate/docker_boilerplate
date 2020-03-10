@@ -1,0 +1,51 @@
+version: '3.5'
+services:
+  minio-s3:
+    image: minio/minio
+    ports:
+      - 0.0.0.0:9000:9000
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    command: server /data
+    volumes:
+      - minio_storage:/data
+    networks:
+      - registry_network
+  registry:
+    image: registry:latest
+    ports:
+      - "5000:5000"
+    environment:
+      REGISTRY_AUTH: 'htpasswd'
+      REGISTRY_AUTH_HTPASSWD_REALM: 'YOUR_DOCKER_REGISTRY_REALM'
+      REGISTRY_AUTH_HTPASSWD_PATH: '/httpasswd_storage/htpasswd'
+      REGISTRY_STORAGE_REDIRECT_DISABLE: 'true'
+    depends_on:
+      - minio-s3
+    volumes:
+      - ~/htpasswd_backup:/httpasswd_storage
+      - ./registry-config/config.yml:/etc/docker/registry/config.yml
+    networks:
+      - registry_network
+  registry-frontend:
+    image: konradkleine/docker-registry-frontend:v2
+    restart: always
+    environment:
+      ENV_DOCKER_REGISTRY_HOST: 'registry'
+      ENV_DOCKER_REGISTRY_PORT: 5000
+    links:
+      - registry
+    ports:
+      - "8080:80"
+    networks:
+      - registry_network
+
+volumes:
+  minio_storage:
+
+networks:
+  registry_network:
+
+
+    
