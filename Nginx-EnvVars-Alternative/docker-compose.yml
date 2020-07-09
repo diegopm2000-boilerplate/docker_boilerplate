@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+  nginx-env-vars:
+    build: .
+    image: nginx-env-vars-alternative
+    volumes:
+      - ./templates:/etc/nginx/templates
+    ports:
+      - "8080:80"
+    environment:
+      - API_HOST=foobar.com
+      - API_PORT=80
