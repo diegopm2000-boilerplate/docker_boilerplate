@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+  
+  artillery:
+    image: quaddo/artillery
+    container_name: artillery
+    volumes:
+      - .:/work
+    command: run hello.yml
